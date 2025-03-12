@@ -1,0 +1,218 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import CallToAction from "../components/CallToAction.astro";
+
+const services = [
+  {
+    id: "speech-therapy",
+    title: "Speech Therapy",
+    description: "Our speech therapy services help children develop communication skills, overcome speech challenges, and improve language comprehension.",
+    details: ["Speech sound development and articulation", "Expressive and receptive language skills", "Social communication and pragmatic skills", "Fluency and stuttering intervention", "Augmentative and alternative communication (AAC)"],
+    image: "/images/services/speech-therapy.jpg",
+  },
+  {
+    id: "occupational-therapy",
+    title: "Occupational Therapy",
+    description: "Occupational therapy focuses on developing fine motor skills, sensory processing, and daily living activities to enhance independence.",
+    details: ["Fine motor skill development", "Sensory integration therapy", "Visual-motor coordination", "Self-care and daily living skills", "Handwriting and pre-writing skills"],
+    image: "/images/services/occupational-therapy.jpg",
+  },
+  {
+    id: "physical-therapy",
+    title: "Physical Therapy",
+    description: "Our physical therapy services help children improve movement, balance, coordination, and strength through specialized exercises.",
+    details: ["Gross motor skill development", "Balance and coordination training", "Strength and endurance building", "Gait training and mobility skills", "Developmental milestone achievement"],
+    image: "/images/services/physical-therapy.jpg",
+  },
+  {
+    id: "developmental-assessment",
+    title: "Developmental Assessment",
+    description: "Comprehensive evaluations to identify developmental strengths and needs, guiding personalized intervention plans.",
+    details: ["Standardized developmental screening", "Comprehensive developmental evaluations", "Functional skill assessment", "Individualized goal setting", "Progress monitoring and reporting"],
+    image: "/images/services/developmental-assessment.jpg",
+  },
+  {
+    id: "parent-coaching",
+    title: "Parent Coaching",
+    description: "Empowering parents with strategies and techniques to support their child's development in everyday routines and activities.",
+    details: ["Home program development", "Strategies for daily routines", "Communication facilitation techniques", "Behavior management strategies", "Developmental milestone guidance"],
+    image: "/images/services/parent-coaching.jpg",
+  },
+  {
+    id: "group-therapy",
+    title: "Group Therapy",
+    description: "Small group sessions that focus on social skills, peer interaction, and collaborative learning in a supportive environment.",
+    details: ["Social skills development", "Peer interaction opportunities", "Collaborative problem-solving", "Turn-taking and sharing practice", "Emotional regulation in group settings"],
+    image: "/images/services/group-therapy.jpg",
+  },
+];
+---
+
+<MainLayout title="Services" description="Explore our comprehensive early intervention services designed to support your child's development.">
+  <Hero title="Our Services" subtitle="Comprehensive early intervention services tailored to your child's unique needs" image="/images/services-hero.jpg" />
+
+  <!-- Services Overview -->
+  <section class="py-2xl bg-background">
+    <div class="max-w-7xl mx-auto px-md md:px-lg">
+      <div class="text-center mb-xl">
+        <h2>How We Can Help</h2>
+        <p class="mt-sm max-w-2xl mx-auto">Our interdisciplinary team provides a range of specialized services to support your child's development. Each service is tailored to meet your child's unique needs and goals.</p>
+      </div>
+
+      <div class="space-y-2xl">
+        {
+          services.map((service, index) => (
+            <div id={service.id} class={`grid grid-cols-1 md:grid-cols-2 gap-xl items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
+              <div class={index % 2 === 1 ? "md:order-2" : ""}>
+                <h2 class="mb-md">{service.title}</h2>
+                <p class="mb-lg">{service.description}</p>
+
+                <h3 class="text-lg mb-sm">What We Offer:</h3>
+                <ul class="space-y-sm mb-lg">
+                  {service.details.map((detail) => (
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-sm text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button href="/contact" variant="primary">
+                  Schedule a Consultation
+                </Button>
+              </div>
+              <div class={index % 2 === 1 ? "md:order-1" : ""}>
+                <img src={service.image} alt={`${service.title} at Centro de Intervención Temprana`} class="w-full h-auto rounded-image shadow-card" />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach Section -->
+  <section class="py-2xl bg-mint/20">
+    <div class="max-w-7xl mx-auto px-md md:px-lg">
+      <div class="text-center mb-xl">
+        <h2>Our Approach</h2>
+        <p class="mt-sm max-w-2xl mx-auto">We believe in a collaborative, family-centered approach that empowers both children and their families.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+        <Card title="Individualized">
+          <p>We recognize that each child is unique. Our interventions are tailored to your child's specific strengths, challenges, and interests to maximize engagement and progress.</p>
+        </Card>
+
+        <Card title="Family-Centered">
+          <p>We partner with families throughout the intervention process, providing education, support, and strategies to implement at home to reinforce skills and promote development.</p>
+        </Card>
+
+        <Card title="Evidence-Based">
+          <p>Our therapeutic approaches are grounded in research and best practices, ensuring that your child receives the most effective interventions for their specific needs.</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-2xl bg-background">
+    <div class="max-w-7xl mx-auto px-md md:px-lg">
+      <div class="text-center mb-xl">
+        <h2>Our Process</h2>
+        <p class="mt-sm max-w-2xl mx-auto">From initial assessment to ongoing intervention, we follow a structured process to ensure your child receives the support they need.</p>
+      </div>
+
+      <div class="relative">
+        <!-- Process Timeline (Desktop) -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-primary/30 -translate-x-1/2"></div>
+
+        <div class="space-y-xl">
+          <!-- Step 1 -->
+          <div class="relative grid grid-cols-1 md:grid-cols-2 gap-lg">
+            <div class="md:text-right md:pr-xl">
+              <div class="hidden md:block absolute right-0 top-0 w-xl h-full">
+                <div class="absolute right-0 top-6 w-6 h-6 rounded-full bg-primary -translate-x-1/2"></div>
+              </div>
+              <h3 class="mb-sm">Initial Consultation</h3>
+              <p>We begin with a comprehensive discussion about your child's development, your concerns, and your goals. This helps us understand your child's unique needs and how we can best support them.</p>
+            </div>
+            <div class="md:hidden w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-sm">
+              <span class="text-primary font-bold">1</span>
+            </div>
+            <div></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative grid grid-cols-1 md:grid-cols-2 gap-lg">
+            <div class="md:hidden w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-sm">
+              <span class="text-primary font-bold">2</span>
+            </div>
+            <div></div>
+            <div class="md:pl-xl">
+              <div class="hidden md:block absolute left-0 top-0 w-xl h-full">
+                <div class="absolute left-0 top-6 w-6 h-6 rounded-full bg-primary translate-x-1/2"></div>
+              </div>
+              <h3 class="mb-sm">Comprehensive Assessment</h3>
+              <p>Our specialists conduct thorough evaluations to identify your child's strengths and areas of need. This may include standardized assessments, observations, and functional skill evaluations.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative grid grid-cols-1 md:grid-cols-2 gap-lg">
+            <div class="md:text-right md:pr-xl">
+              <div class="hidden md:block absolute right-0 top-0 w-xl h-full">
+                <div class="absolute right-0 top-6 w-6 h-6 rounded-full bg-primary -translate-x-1/2"></div>
+              </div>
+              <h3 class="mb-sm">Individualized Plan Development</h3>
+              <p>Based on the assessment results, we create a personalized intervention plan with specific goals, strategies, and recommendations tailored to your child's unique needs.</p>
+            </div>
+            <div class="md:hidden w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-sm">
+              <span class="text-primary font-bold">3</span>
+            </div>
+            <div></div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative grid grid-cols-1 md:grid-cols-2 gap-lg">
+            <div class="md:hidden w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-sm">
+              <span class="text-primary font-bold">4</span>
+            </div>
+            <div></div>
+            <div class="md:pl-xl">
+              <div class="hidden md:block absolute left-0 top-0 w-xl h-full">
+                <div class="absolute left-0 top-6 w-6 h-6 rounded-full bg-primary translate-x-1/2"></div>
+              </div>
+              <h3 class="mb-sm">Intervention Implementation</h3>
+              <p>Our specialists work directly with your child using evidence-based strategies and engaging activities to address the identified goals and promote development across all domains.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="relative grid grid-cols-1 md:grid-cols-2 gap-lg">
+            <div class="md:text-right md:pr-xl">
+              <div class="hidden md:block absolute right-0 top-0 w-xl h-full">
+                <div class="absolute right-0 top-6 w-6 h-6 rounded-full bg-primary -translate-x-1/2"></div>
+              </div>
+              <h3 class="mb-sm">Progress Monitoring & Plan Adjustment</h3>
+              <p>We continuously monitor your child's progress, regularly update you on their development, and adjust the intervention plan as needed to ensure optimal outcomes.</p>
+            </div>
+            <div class="md:hidden w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-sm">
+              <span class="text-primary font-bold">5</span>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CallToAction title="Ready to Get Started?" description="Contact us today to schedule an initial consultation and learn how our services can support your child's development." buttonText="Contact Us" buttonLink="/contact" />
+</MainLayout>
+

@@ -1,0 +1,27 @@
+---
+const { title, image, alt = "", link, class: className, ...rest } = Astro.props;
+---
+
+<div class={`bg-white rounded-2xl shadow-md overflow-hidden flex flex-col h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg border border-light-gray ${className || ""}`} {...rest}>
+  {
+    image && (
+      <div class="relative">
+        <img src={image} alt={alt} class="w-full h-64 sm:h-72 object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1613896640137-bb5b31496315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80';" />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+      </div>
+    )
+  }
+  <div class="p-6 sm:p-8 flex flex-col flex-grow">
+    {title && <h3 class="text-xl sm:text-2xl font-bold mb-4 text-primary">{title}</h3>}
+    <div class="card-content flex-grow text-base sm:text-lg mb-6 leading-relaxed">
+      <slot />
+    </div>
+    {
+      link && (
+        <a href={link} class="btn-tertiary self-start mt-6 text-lg py-2 px-4">
+          Saber Más
+        </a>
+      )
+    }
+  </div>
+</div>

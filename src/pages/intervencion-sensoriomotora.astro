@@ -1,0 +1,187 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import CallToAction from "../components/CallToAction.astro";
+
+const serviciosNinos = [
+  {
+    title: "Estimulación Sensoriomotora para Niños Menores de 12 Años",
+    description: "Nuestro programa incluye juegos de estimulación táctil, ejercicios visuales y auditivos, terapia de movimiento y equilibrio, y juegos de propiocepción con objetos pesados.",
+    icon: "sensory",
+  },
+  {
+    title: "Intervención para Niños con Diversidad Funcional",
+    description: "Programas especializados para niños con déficits motores, auditivos o visuales, con evaluación exhaustiva, planes personalizados y seguimiento continuo.",
+    icon: "diversity",
+  },
+];
+
+const serviciosFamilias = [
+  {
+    title: "Escuela Familiar - Estimulación Sensoriomotora en el Hogar",
+    description: "Sesiones de formación para que las familias apliquen estrategias de estimulación sensorial en casa, con talleres dirigidos por profesionales y materiales para usar en el hogar.",
+    icon: "home",
+  },
+  {
+    title: "Orientación para Familias de Niños con Diversidad Funcional",
+    description: "Servicios de psicoeducación que proporcionan herramientas y apoyo emocional para las familias, incluyendo estrategias para promover la autonomía y grupos de apoyo.",
+    icon: "support",
+  },
+];
+
+const serviciosEducadores = [
+  {
+    title: "Evaluación Sensoriomotora de Estudiantes",
+    description: "Servicios de detección utilizando el Inventario de Desarrollo Battelle para evaluar control muscular, coordinación, locomoción y habilidades motoras finas.",
+    icon: "evaluation",
+  },
+  {
+    title: "Orientación para Maestros sobre Diversidad Funcional",
+    description: "Apoyo integral para educadores que trabajan con niños con necesidades especiales, incluyendo formación, materiales didácticos y apoyo para implementación en el aula.",
+    icon: "teaching",
+  },
+];
+
+const beneficios = [
+  {
+    title: "Desarrollo Físico",
+    description: "Mejora de la coordinación motora, fortalecimiento muscular, desarrollo del equilibrio y perfeccionamiento de habilidades motoras finas.",
+    icon: "physical",
+  },
+  {
+    title: "Desarrollo Cognitivo",
+    description: "Mejora de la atención y concentración, desarrollo de habilidades de resolución de problemas, mejor procesamiento sensorial y aumento de la conciencia espacial.",
+    icon: "cognitive",
+  },
+  {
+    title: "Desarrollo Emocional y Social",
+    description: "Mayor confianza y autoestima, mejora de la autorregulación emocional, desarrollo de habilidades sociales y reducción de la frustración y ansiedad.",
+    icon: "emotional",
+  },
+];
+---
+
+<MainLayout title="Intervención Sensoriomotora" description="Servicios de intervención sensoriomotora temprana para niños con dificultades en el procesamiento sensorial y el desarrollo motor.">
+  <Hero title="Intervención Sensoriomotora Temprana" subtitle="Enfoque terapéutico para bebés y niños con dificultades en el procesamiento sensorial y el desarrollo motor" image="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+    <Button href="/contacto" variant="primary">Programar una Consulta</Button>
+  </Hero>
+
+  <!-- Introducción -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>¿Qué es la Intervención Sensoriomotora Temprana?</h2>
+        <p class="mt-2 max-w-3xl mx-auto">
+          La Intervención Sensoriomotora Temprana es un enfoque terapéutico para bebés y niños con dificultades en el procesamiento sensorial y el desarrollo motor. Esta intervención se basa en la premisa de que los primeros años son esenciales para el desarrollo cerebral debido a la alta plasticidad neuronal, lo que hace crucial abordar las alteraciones de la percepción
+          sensorial y las habilidades motoras lo antes posible.
+        </p>
+        <p class="mt-2 max-w-3xl mx-auto">Nuestro enfoque se centra en proporcionar experiencias sensoriales y motoras adecuadas para promover el desarrollo óptimo del sistema nervioso, mejorando la capacidad del niño para procesar la información sensorial y desarrollar habilidades motoras apropiadas para su edad.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Niño en sesión de intervención sensoriomotora" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <h3 class="mb-4">Importancia de la Intervención Temprana</h3>
+          <p>La intervención sensoriomotora temprana es crucial porque:</p>
+          <ul class="list-disc pl-6 mt-4 space-y-2">
+            <li>El desarrollo sensorial y motor forma la base para habilidades cognitivas y sociales más complejas</li>
+            <li>Las dificultades sensoriales no tratadas pueden afectar el aprendizaje, el comportamiento y la participación social</li>
+            <li>La intervención temprana aprovecha la plasticidad cerebral para lograr mejores resultados</li>
+            <li>Proporciona a las familias estrategias para apoyar el desarrollo de sus hijos en la vida diaria</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Niños -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Niños</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Ofrecemos una variedad de servicios diseñados específicamente para apoyar el desarrollo sensoriomotor de los niños, adaptados a sus necesidades individuales y etapa de desarrollo.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          serviciosNinos.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+
+      <div class="mt-8">
+        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niños en actividades de estimulación sensoriomotora" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Familias -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Familias</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Reconocemos el papel fundamental de la familia en el desarrollo sensoriomotor del niño. Por eso, ofrecemos servicios diseñados para empoderar a las familias con conocimientos, habilidades y recursos.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          serviciosFamilias.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Educadores -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Educadores</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Colaboramos con educadores para crear entornos educativos que apoyen el desarrollo sensoriomotor de todos los niños, incluidos aquellos con necesidades especiales.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          serviciosEducadores.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Beneficios de la Intervención Sensoriomotora Temprana</h2>
+        <p class="mt-2 max-w-3xl mx-auto">La intervención sensoriomotora temprana ofrece numerosos beneficios para el desarrollo integral del niño, sentando las bases para un aprendizaje exitoso y una participación plena en la vida diaria.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          beneficios.map((beneficio) => (
+            <Card title={beneficio.title} icon={beneficio.icon}>
+              <p>{beneficio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Llamada a la acción -->
+  <CallToAction title="¿Preocupado por el desarrollo sensoriomotor de tu hijo?" description="Nuestro equipo de especialistas está disponible para evaluar las necesidades de tu hijo y diseñar un plan de intervención personalizado." buttonText="Contáctanos" buttonLink="/contacto" />
+</MainLayout>

@@ -1,4 +1,91 @@
-# Astro Starter Kit: Basics
+# Centro de Intervención Temprana Website
+
+A modern, accessible website for an early intervention center built with Astro and Tailwind CSS.
+
+## Project Overview
+
+This website serves as an online presence for a center focused on early intervention services for children from birth to six years. It provides information about the center's services, team, approach, and contact details.
+
+## Features
+
+- Responsive design optimized for all devices
+- Modern, child-friendly UI with a warm and professional aesthetic
+- Accessible navigation and content
+- Fast performance with minimal JavaScript
+- SEO-friendly structure
+
+## Tech Stack
+
+- **Framework**: [Astro](https://astro.build/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Typography**: Quicksand, Nunito, and Varela Round via Fontsource
+- **Deployment**: [Netlify](https://netlify.com/)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/centro-intervencion.git
+   cd centro-intervencion
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:4321`
+
+## Project Structure
+
+```
+/
+├── public/           # Static assets (images, fonts, etc.)
+├── src/
+│   ├── components/   # Reusable UI components
+│   ├── layouts/      # Page layouts
+│   ├── pages/        # Astro pages (routes)
+│   └── styles/       # Global styles and Tailwind config
+├── astro.config.mjs  # Astro configuration
+├── tailwind.config.cjs # Tailwind configuration
+└── package.json      # Dependencies and scripts
+```
+
+## Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist/` directory.
+
+## Deployment
+
+This site is configured for deployment on Netlify. Simply connect your Netlify account to your repository, and it will automatically build and deploy when changes are pushed to the main branch.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- Design inspiration from [source]
+- Icons from [Heroicons](https://heroicons.com/)
+- Fonts from [Google Fonts](https://fonts.google.com/) via [Fontsource](https://fontsource.org/)
 
 ```sh
 npm create astro@latest -- --template basics

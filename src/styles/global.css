@@ -1,0 +1,125 @@
+/* Import fonts */
+@import '@fontsource/quicksand/400.css';
+@import '@fontsource/quicksand/700.css';
+@import '@fontsource/nunito/400.css';
+@import '@fontsource/nunito/600.css';
+@import '@fontsource/varela-round/400.css';
+
+/* Tailwind CSS v4 imports */
+@import "tailwindcss";
+
+/* Base styles */
+html {
+  font-family: 'Nunito', sans-serif;
+  color: #3D3D3D;
+  background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+/* Custom component styles */
+.btn-primary {
+  background-color: #FF9EBB;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(255, 158, 187, 0.3);
+  transition: all 200ms;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 12px rgba(255, 158, 187, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 158, 187, 0.5);
+}
+
+.btn-secondary {
+  background-color: #A2D2FF;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(162, 210, 255, 0.3);
+  transition: all 200ms;
+}
+
+.btn-secondary:hover {
+  background-color: #8BC5FF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(162, 210, 255, 0.4);
+}
+
+.btn-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(162, 210, 255, 0.5);
+}
+
+.btn-tertiary {
+  color: #A2D2FF;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition: all 200ms;
+  position: relative;
+}
+
+.btn-tertiary:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #A2D2FF;
+  transition: width 200ms;
+}
+
+.btn-tertiary:hover:after {
+  width: 100%;
+}
+
+.btn-tertiary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(162, 210, 255, 0.5);
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border: 1px solid #F5F5F5;
+  transition: all 200ms;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #F5F5F5;
+  transition: all 200ms;
+}
+
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(162, 210, 255, 0.5);
+  border-color: #A2D2FF;
+}

@@ -1,0 +1,12 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="25" cy="25" r="20" fill="#75C2F6"/>
+  
+  <!-- Child Silhouette -->
+  <path d="M25 10C21.5 10 18.5 13 18.5 16.5C18.5 20 21.5 23 25 23C28.5 23 31.5 20 31.5 16.5C31.5 13 28.5 10 25 10Z" fill="white"/>
+  <path d="M32 26H18C16.3 26 15 27.3 15 29V35C15 36.7 16.3 38 18 38H32C33.7 38 35 36.7 35 35V29C35 27.3 33.7 26 32 26Z" fill="white"/>
+  
+  <!-- Text -->
+  <text x="50" y="30" font-family="Quicksand, sans-serif" font-size="18" font-weight="700" fill="#3D3D3D">Centro de</text>
+  <text x="50" y="45" font-family="Quicksand, sans-serif" font-size="14" font-weight="400" fill="#3D3D3D">Intervención Temprana</text>
+</svg> 

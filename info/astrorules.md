@@ -1,0 +1,98 @@
+# Cursor Rules for Astro Project: Centro de Intervención Temprana
+
+## Project Overview
+- **Type**: Static website built with Astro and Tailwind CSS
+- **Purpose**: Website for a center focused on early intervention ("intervención temprana")
+- **Deployment**: Netlify
+
+## Project Structure
+```
+/
+├── public/           # Static assets (images, fonts, etc.)
+├── src/
+│   ├── components/   # Reusable UI components
+│   ├── layouts/      # Page layouts
+│   ├── pages/        # Astro pages (routes)
+│   ├── styles/       # Global styles and Tailwind config
+│   └── utils/        # Utility functions
+├── astro.config.mjs  # Astro configuration
+├── tailwind.config.cjs # Tailwind configuration
+├── package.json      # Dependencies and scripts
+└── tsconfig.json     # TypeScript configuration (if using TS)
+```
+
+## Coding Standards
+
+### General
+- Use consistent indentation (2 spaces)
+- Follow component-based architecture
+- Keep components small and focused on a single responsibility
+- Use meaningful variable and function names in camelCase
+- Add comments for complex logic
+
+### Astro Specific
+- Use `.astro` files for pages and components
+- Leverage Astro's partial hydration with `client:*` directives only when necessary
+- Organize pages in the `src/pages` directory following the file-based routing
+- Use layouts for consistent page structure
+- Utilize Astro's built-in image optimization
+
+### Tailwind CSS
+- Follow utility-first approach
+- Create component classes for repeated patterns
+- Use Tailwind's responsive prefixes (`sm:`, `md:`, `lg:`, etc.) for responsive design
+- Maintain a consistent color palette defined in `tailwind.config.cjs`
+- Use Tailwind's typography plugin for content-rich areas
+
+### Assets
+- Optimize images before adding to the project
+- Use descriptive filenames for assets
+- Store all static assets in the `public` directory
+- Use relative paths for internal links
+
+## Performance Guidelines
+- Minimize JavaScript usage (leverage Astro's zero JS by default)
+- Optimize images using Astro's image components
+- Implement lazy loading for below-the-fold content
+- Keep third-party dependencies to a minimum
+
+## Accessibility
+- Use semantic HTML elements
+- Include proper alt text for images
+- Ensure sufficient color contrast
+- Make sure the site is keyboard navigable
+- Test with screen readers
+
+## SEO Best Practices
+- Include meta tags for all pages
+- Use descriptive page titles
+- Implement proper heading hierarchy
+- Add structured data where appropriate
+- Create a sitemap.xml and robots.txt
+
+## Netlify Deployment
+- Configure `netlify.toml` for build settings
+- Set up environment variables in Netlify dashboard
+- Enable Netlify forms if contact functionality is needed
+- Configure redirects for clean URLs
+- Set up custom domain and HTTPS
+
+## Content Guidelines
+- Focus on clear, concise information about early intervention services
+- Use professional, compassionate language
+- Include contact information prominently
+- Provide resources for parents and caregivers
+- Consider multilingual support if serving diverse populations
+
+## Git Workflow
+- Use descriptive commit messages
+- Create feature branches for new functionality
+- Review code before merging to main branch
+- Don't commit sensitive information or large binary files
+
+## Testing
+- Test across different browsers and devices
+- Verify all links work correctly
+- Ensure forms submit properly
+- Check for console errors
+- Validate HTML and CSS 

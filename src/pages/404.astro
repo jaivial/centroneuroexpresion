@@ -1,0 +1,21 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<MainLayout title="Page Not Found" description="The page you are looking for could not be found.">
+  <section class="py-3xl bg-background">
+    <div class="max-w-7xl mx-auto px-md md:px-lg text-center">
+      <div class="mb-xl">
+        <span class="text-6xl md:text-8xl font-bold text-primary">404</span>
+      </div>
+      <h1 class="mb-md">Page Not Found</h1>
+      <p class="mb-xl max-w-2xl mx-auto">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+      <div class="flex flex-col md:flex-row gap-md justify-center">
+        <Button href="/" variant="primary">Return to Home</Button>
+        <Button href="/contact" variant="secondary">Contact Us</Button>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+

@@ -1,0 +1,31 @@
+---
+const { variant = "primary", href, type, class: className, ...rest } = Astro.props;
+
+const getClass = () => {
+  switch (variant) {
+    case "primary":
+      return "btn-primary";
+    case "secondary":
+      return "btn-secondary";
+    case "tertiary":
+      return "btn-tertiary";
+    default:
+      return "btn-primary";
+  }
+};
+
+const classes = `${getClass()} ${className || ""}`;
+---
+
+{
+  href ? (
+    <a href={href} class={classes} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <button type={type || "button"} class={classes} {...rest}>
+      <slot />
+    </button>
+  )
+}
+

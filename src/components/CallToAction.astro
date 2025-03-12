@@ -1,0 +1,17 @@
+---
+import Button from "./Button.astro";
+
+const { title, description, buttonText, buttonLink, class: className } = Astro.props;
+---
+
+<div class="max-w-[900px] mx-auto px-4 md:px-6 my-16">
+  <section class={`bg-gradient-to-r from-primary to-accent py-16 md:py-20 rounded-lg relative overflow-hidden ${className || ""}`}>
+    <slot />
+    <div class="absolute inset-0 bg-black/20 z-0"></div>
+    <div class="max-w-3xl mx-auto px-4 md:px-6 text-center relative z-10">
+      <h2 class="text-white mb-6 text-3xl md:text-4xl font-bold leading-tight drop-shadow-md">{title}</h2>
+      <p class="text-white max-w-2xl mx-auto mb-8 text-base md:text-lg leading-relaxed px-4 drop-shadow-md font-medium">{description}</p>
+      <Button href={buttonLink} variant="secondary" class="inline-block text-lg py-4 px-8 font-bold">{buttonText}</Button>
+    </div>
+  </section>
+</div>

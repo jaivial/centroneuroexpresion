@@ -1,0 +1,161 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Card from "../components/Card.astro";
+
+const equipo = [
+  {
+    title: "Psicólogos Infantiles",
+    description: "Especializados en el desarrollo cognitivo y emocional de los niños, proporcionando evaluación, diagnóstico e intervención.",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+    icon: "psychology",
+  },
+  {
+    title: "Logopedas",
+    description: "Expertos en el desarrollo del lenguaje y la comunicación, trabajando con niños que presentan retrasos o trastornos del habla y el lenguaje.",
+    image: "https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+    icon: "speech",
+  },
+  {
+    title: "Terapeutas Ocupacionales",
+    description: "Centrados en el desarrollo sensorial y motor, ayudando a los niños a desarrollar habilidades para la vida diaria y la participación social.",
+    image: "https://images.unsplash.com/photo-1576765608866-5b51046452be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+    icon: "therapy",
+  },
+  {
+    title: "Especialistas en Atención Temprana",
+    description: "Profesionales con formación específica en el desarrollo infantil temprano y en la coordinación de servicios de intervención.",
+    image: "https://images.unsplash.com/photo-1516627145497-ae6968895b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+    icon: "specialist",
+  },
+];
+
+const enfoque = [
+  {
+    title: "Intervención Integral",
+    description: "Abordamos el desarrollo del niño desde una perspectiva holística, considerando todas las áreas del desarrollo: cognitiva, lingüística, sensoriomotora, social y emocional. Nuestros servicios están diseñados para trabajar de manera coordinada, asegurando que cada niño reciba el apoyo que necesita en todas las áreas relevantes.",
+    icon: "holistic",
+  },
+  {
+    title: "Atención Personalizada",
+    description: "Reconocemos que cada niño es único, con sus propias fortalezas, desafíos y ritmo de desarrollo. Por eso, diseñamos planes de intervención personalizados que se adaptan a las necesidades específicas de cada niño y su familia, asegurando que reciban el apoyo más efectivo para su situación particular.",
+    icon: "personalized",
+  },
+  {
+    title: "Participación Familiar",
+    description: "Creemos firmemente que las familias son una parte esencial del proceso de intervención. Trabajamos en estrecha colaboración con los padres y cuidadores, proporcionándoles la formación, las herramientas y el apoyo que necesitan para continuar el trabajo terapéutico en casa y participar activamente en el desarrollo de sus hijos.",
+    icon: "family",
+  },
+];
+
+const instalaciones = [
+  {
+    title: "Salas Sensoriales",
+    description: "Espacios equipados con diversos materiales y equipos para la estimulación sensorial, diseñados para proporcionar experiencias sensoriales controladas que favorecen el desarrollo.",
+    image: "https://images.unsplash.com/photo-1513682121497-80211f36a7d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Salas de Terapia",
+    description: "Espacios acogedores y bien equipados donde se realizan las sesiones individuales de terapia, adaptados a las necesidades específicas de cada intervención.",
+    image: "https://images.unsplash.com/photo-1513682121497-80211f36a7d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+  },
+];
+---
+
+<MainLayout title="Nosotros" description="Conoce más sobre nuestro Centro de Intervención Temprana y nuestro enfoque para ayudar a niños con necesidades de desarrollo.">
+  <Hero title="Sobre Nosotros" subtitle="Comprometidos con el desarrollo integral de los niños desde sus primeros años" image="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+    <Button href="/contacto" variant="primary">Contáctanos</Button>
+  </Hero>
+
+  <!-- Nuestra Misión -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Nuestra Misión</h2>
+        <p class="mt-2 max-w-3xl mx-auto">
+          En el Centro de Intervención Temprana, nos dedicamos a proporcionar servicios especializados de alta calidad para niños desde el nacimiento hasta los seis años que presentan retrasos en el desarrollo o están en riesgo de desarrollarlos. Nuestra misión es potenciar el desarrollo integral de cada niño, minimizar los retrasos del desarrollo y proporcionar a las familias
+          las herramientas y el apoyo necesarios para ayudar a sus hijos a alcanzar su máximo potencial.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img src="https://images.unsplash.com/photo-1602046819300-7804d1b3a28f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Niños jugando" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <h3 class="mb-4">Nuestra Visión</h3>
+          <p>Aspiramos a ser un centro de referencia en intervención temprana, reconocido por la excelencia de nuestros servicios, la innovación en nuestras metodologías y el impacto positivo en la vida de los niños y sus familias. Buscamos crear un mundo donde cada niño tenga la oportunidad de desarrollar su máximo potencial, independientemente de sus desafíos iniciales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestro Enfoque -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Nuestro Enfoque</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Nuestro enfoque se basa en principios científicos y en la comprensión de que cada niño es único. Trabajamos de manera integral, considerando todas las áreas del desarrollo y adaptando nuestras intervenciones a las necesidades específicas de cada niño y su familia.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {
+          enfoque.map((item) => (
+            <Card title={item.title} icon={item.icon}>
+              <p>{item.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestro Equipo -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Nuestro Equipo</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Contamos con un equipo multidisciplinario de profesionales altamente cualificados y apasionados por el desarrollo infantil. Nuestros especialistas trabajan de manera colaborativa para proporcionar una atención integral y de calidad a cada niño y su familia.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          equipo.map((miembro) => (
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+              <img src={miembro.image} alt={miembro.title} class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <h3 class="text-xl font-bold mb-2">{miembro.title}</h3>
+              <p>{miembro.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestras Instalaciones -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Nuestras Instalaciones</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Nuestro centro está diseñado pensando en las necesidades de los niños y sus familias, creando un entorno acogedor, seguro y estimulante que favorece el aprendizaje y el desarrollo.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          instalaciones.map((instalacion) => (
+            <div>
+              <img src={instalacion.image} alt={instalacion.title} class="w-full h-auto rounded-lg shadow-md mb-4 object-cover aspect-video" />
+              <h3 class="text-xl font-bold mb-2">{instalacion.title}</h3>
+              <p>{instalacion.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Llamada a la acción -->
+  <CallToAction title="¿Quieres conocer más sobre nuestro centro?" description="Estamos aquí para responder a todas tus preguntas y ayudarte a encontrar los servicios adecuados para tu hijo." buttonText="Contáctanos" buttonLink="/contacto" />
+</MainLayout>

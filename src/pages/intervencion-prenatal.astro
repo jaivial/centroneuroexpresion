@@ -1,0 +1,154 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import CallToAction from "../components/CallToAction.astro";
+
+const serviciosEmbarazadas = [
+  {
+    title: "Sesiones de Estimulación Prenatal",
+    description: "Ofrecemos un programa completo de estimulación prenatal que incluye sesiones informativas, talleres de psicoeducación, técnicas de relajación y actividades de estimulación sensorial para el feto.",
+    icon: "baby",
+  },
+  {
+    title: "Estimulación para Embarazos de Alto Riesgo",
+    description: "Programas especializados con evaluación detallada y planes individualizados para madres con embarazos de alto riesgo, adaptados a cada caso particular.",
+    icon: "care",
+  },
+];
+
+const serviciosFamilias = [
+  {
+    title: "Cursos de Formación para Parejas Expectantes",
+    description: "Programas para ayudar a las parejas a aprender cómo cuidar las necesidades físicas, mentales y emocionales de la madre durante el embarazo.",
+    icon: "couple",
+  },
+  {
+    title: "Formación para Miembros de la Familia Extendida",
+    description: "Recursos para que toda la familia pueda participar en esta etapa importante, incluyendo charlas psicoeducativas y orientación sobre cómo crear un entorno sensorial favorable.",
+    icon: "family",
+  },
+];
+
+const beneficios = [
+  {
+    title: "Para el Bebé",
+    description: "Mejora del desarrollo neurológico, estimulación temprana de los sentidos, fortalecimiento del vínculo con los padres y mejor adaptación al entorno después del nacimiento.",
+    icon: "baby",
+  },
+  {
+    title: "Para la Madre",
+    description: "Reducción del estrés y la ansiedad, mejora del bienestar emocional, fortalecimiento del vínculo con el bebé y mayor confianza en el proceso de embarazo y parto.",
+    icon: "mother",
+  },
+  {
+    title: "Para la Familia",
+    description: "Participación activa en el desarrollo del bebé, fortalecimiento de los lazos familiares, preparación para la llegada del nuevo miembro y creación de un entorno de apoyo positivo.",
+    icon: "family",
+  },
+];
+---
+
+<MainLayout title="Intervención Prenatal" description="Servicios de intervención prenatal temprana para promover el desarrollo integral del bebé antes del nacimiento.">
+  <Hero title="Intervención Prenatal Temprana" subtitle="Actividades realizadas antes del nacimiento para promover el desarrollo integral del bebé" image="/images/hero-prenatal.jpg">
+    <Button href="/contacto" variant="primary">Programar una Consulta</Button>
+  </Hero>
+
+  <!-- Introducción -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>¿Qué es la Intervención Prenatal Temprana?</h2>
+        <p class="mt-2 max-w-3xl mx-auto">
+          La Intervención Prenatal Temprana abarca actividades realizadas antes del nacimiento para promover el desarrollo integral del bebé. Esto incluye estimulación auditiva, táctil, motora y visual dirigida a mejorar el desarrollo cognitivo, emocional y sensorial del feto mientras se establece una comunicación afectiva entre el bebé por nacer y los padres.
+        </p>
+        <p class="mt-2 max-w-3xl mx-auto">Nuestro enfoque se basa en la evidencia científica que demuestra que el feto es capaz de percibir, responder y aprender de los estímulos externos desde etapas tempranas del embarazo, lo que sienta las bases para un desarrollo óptimo después del nacimiento.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Estimulación prenatal" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <h3 class="mb-4">Importancia de la Intervención Prenatal</h3>
+          <p>La intervención prenatal es importante porque:</p>
+          <ul class="list-disc pl-6 mt-4 space-y-2">
+            <li>El desarrollo cerebral comienza desde la concepción</li>
+            <li>El feto es capaz de percibir y responder a estímulos externos</li>
+            <li>Fortalece el vínculo afectivo entre los padres y el bebé</li>
+            <li>Puede favorecer un mejor desarrollo después del nacimiento</li>
+            <li>Prepara a los padres para la crianza</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Embarazadas -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Embarazadas</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Ofrecemos una variedad de servicios diseñados específicamente para apoyar el desarrollo prenatal, adaptados a las necesidades individuales de cada embarazada y su bebé.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          serviciosEmbarazadas.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+
+      <div class="mt-8">
+        <img src="https://images.unsplash.com/photo-1584814169175-a154985e4517?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Sesión de estimulación prenatal" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Familias -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Familias</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Reconocemos el papel fundamental de la familia en el desarrollo prenatal. Por eso, ofrecemos servicios diseñados para empoderar a las familias con conocimientos, habilidades y recursos.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          serviciosFamilias.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Beneficios de la Intervención Prenatal Temprana</h2>
+        <p class="mt-2 max-w-3xl mx-auto">La intervención prenatal temprana ofrece numerosos beneficios tanto para el bebé como para los padres, sentando las bases para un desarrollo óptimo y una relación afectiva sólida.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          beneficios.map((beneficio) => (
+            <Card title={beneficio.title} icon={beneficio.icon}>
+              <p>{beneficio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Llamada a la acción -->
+  <CallToAction title="¿Interesada en la estimulación prenatal?" description="Nuestro equipo de especialistas está disponible para guiarte durante esta etapa tan importante y ayudarte a establecer una conexión especial con tu bebé." buttonText="Contáctanos" buttonLink="/contacto" />
+</MainLayout>

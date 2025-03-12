@@ -1,0 +1,31 @@
+---
+const { title, subtitle, image, overlay = true } = Astro.props;
+
+// Fallback image from Unsplash if the provided image doesn't load
+const fallbackImage = "https://images.unsplash.com/photo-1605627079912-97c3810a11a4?q=80&w=3807&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+---
+
+<section class="relative min-h-[60vh] md:min-h-[70vh] flex items-center">
+  <div class="absolute inset-0 z-0">
+    <img src={image || fallbackImage} alt="" class="w-full h-full object-cover" loading="eager" fetchpriority="high" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1613896640137-bb5b31496315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80';" />
+    {
+      overlay && (
+        <>
+          <div class="absolute inset-0 bg-black/40" />
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-secondary/60" />
+        </>
+      )
+    }
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12 text-white">
+    <div class="max-w-2xl backdrop-blur-sm bg-black/20 p-6 md:p-8 rounded-lg shadow-lg mx-auto text-center">
+      <h1 class="mb-8 md:mb-10 text-3xl md:text-5xl font-bold leading-tight drop-shadow-md">{title}</h1>
+
+      {subtitle && <p class="text-lg md:text-2xl mb-10 font-light leading-relaxed drop-shadow-md">{subtitle}</p>}
+      <div class="flex flex-col sm:flex-row gap-8 justify-center">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>

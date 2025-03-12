@@ -1,0 +1,192 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import CallToAction from "../components/CallToAction.astro";
+
+const serviciosNinos = [
+  {
+    title: "Sesiones de estimulación lingüística",
+    description: "Sesiones individuales o en pequeños grupos diseñadas para estimular el desarrollo del lenguaje a través de actividades lúdicas y estructuradas.",
+    icon: "chat",
+  },
+  {
+    title: "Intervención para niños con problemas de lenguaje",
+    description: "Programas personalizados para niños con dificultades en el desarrollo del lenguaje, centrados en mejorar sus habilidades comunicativas.",
+    icon: "puzzle",
+  },
+];
+
+const serviciosFamilias = [
+  {
+    title: "Cursos de formación para familias",
+    description: "Talleres y cursos para familias sobre cómo estimular el desarrollo del lenguaje de sus hijos en el hogar.",
+    icon: "home",
+  },
+  {
+    title: "Cursos para familias de niños con problemas de lenguaje",
+    description: "Programas específicos para familias de niños con dificultades en el desarrollo del lenguaje, proporcionando estrategias y recursos adaptados.",
+    icon: "heart",
+  },
+];
+
+const serviciosEducadores = [
+  {
+    title: "Formación para estimular el desarrollo en educadores",
+    description: "Cursos y talleres para educadores sobre cómo implementar estrategias de estimulación lingüística en el aula.",
+    icon: "school",
+  },
+  {
+    title: "Formación para maestros de niños con problemas de lenguaje",
+    description: "Programas específicos para educadores que trabajan con niños con dificultades en el desarrollo del lenguaje, proporcionando estrategias y recursos adaptados.",
+    icon: "book",
+  },
+];
+
+const beneficios = [
+  {
+    title: "Mejora de la comunicación",
+    description: "Los niños desarrollan una mayor capacidad para expresar sus necesidades, pensamientos y emociones.",
+    icon: "chat",
+  },
+  {
+    title: "Desarrollo de habilidades sociales",
+    description: "Fortalecimiento de las habilidades para interactuar con otros niños y adultos.",
+    icon: "users",
+  },
+  {
+    title: "Preparación para el aprendizaje escolar",
+    description: "Desarrollo de habilidades lingüísticas fundamentales para el éxito académico futuro.",
+    icon: "school",
+  },
+  {
+    title: "Prevención de dificultades futuras",
+    description: "Identificación y abordaje temprano de posibles problemas de lenguaje para prevenir dificultades académicas y sociales futuras.",
+    icon: "shield",
+  },
+];
+---
+
+<MainLayout title="Intervención Lingüística" description="Servicios de intervención lingüística temprana para niños desde el nacimiento hasta los seis años de edad.">
+  <Hero title="Intervención Lingüística Temprana" subtitle="Potenciando el desarrollo del lenguaje y la comunicación en los primeros años" image="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+    <Button href="/contacto" variant="primary">Programar una Consulta</Button>
+  </Hero>
+
+  <!-- Introducción -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>¿Qué es la Intervención Lingüística Temprana?</h2>
+        <p class="mt-2 max-w-3xl mx-auto">
+          La Intervención Lingüística Temprana se centra en detectar, evaluar y tratar posibles alteraciones en el desarrollo del lenguaje en niños menores de 6 años. Esta intervención es vital debido a la alta plasticidad del cerebro durante los primeros años, lo que permite una mayor adaptación y recuperación al enfrentar dificultades lingüísticas.
+        </p>
+        <p class="mt-2 max-w-3xl mx-auto">Nuestro enfoque aborda tanto el lenguaje expresivo (la capacidad de producir lenguaje) como el receptivo (la capacidad de comprender), así como los aspectos pragmáticos (uso social del lenguaje) y fonológicos (pronunciación y articulación).</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Niño en sesión de intervención lingüística" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <h3 class="mb-4">Importancia del Desarrollo del Lenguaje</h3>
+          <p>El desarrollo del lenguaje es fundamental para:</p>
+          <ul class="list-disc pl-6 mt-4 space-y-2">
+            <li>La comunicación efectiva con otros</li>
+            <li>El desarrollo cognitivo y el pensamiento</li>
+            <li>El aprendizaje y el éxito académico</li>
+            <li>El desarrollo de habilidades sociales</li>
+            <li>La regulación emocional y conductual</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Niños -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Niños</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Ofrecemos una variedad de servicios diseñados específicamente para apoyar el desarrollo lingüístico de los niños, adaptados a sus necesidades individuales y etapa de desarrollo.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          serviciosNinos.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+
+      <div class="mt-8">
+        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niños en actividades de estimulación lingüística" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Familias -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Familias</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Reconocemos el papel fundamental de la familia en el desarrollo del lenguaje del niño. Por eso, ofrecemos servicios diseñados para empoderar a las familias con conocimientos, habilidades y recursos.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          serviciosFamilias.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Educadores -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Educadores</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Colaboramos con educadores para crear entornos educativos que apoyen el desarrollo lingüístico de todos los niños, incluidos aquellos con dificultades del lenguaje.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          serviciosEducadores.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Beneficios de la Intervención Lingüística Temprana</h2>
+        <p class="mt-2 max-w-3xl mx-auto">La intervención lingüística temprana ofrece numerosos beneficios para el desarrollo integral del niño, sentando las bases para una comunicación efectiva a lo largo de su vida.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          beneficios.map((beneficio) => (
+            <Card title={beneficio.title} icon={beneficio.icon}>
+              <p>{beneficio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Llamada a la acción -->
+  <CallToAction title="¿Preocupado por el desarrollo del lenguaje de tu hijo?" description="Nuestro equipo de especialistas está disponible para evaluar las habilidades lingüísticas de tu hijo y diseñar un plan de intervención personalizado." buttonText="Contáctanos" buttonLink="/contacto" />
+</MainLayout>

@@ -1,0 +1,24 @@
+---
+const { quote, author, image } = Astro.props;
+---
+
+<div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
+  {
+    image && (
+      <div class="flex-shrink-0 relative mb-6 md:mb-0">
+        <div class="absolute inset-0 bg-primary rounded-full opacity-20 blur-md transform scale-110" />
+        <img src={image} alt={`Photo of ${author}`} class="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover relative z-10 border-2 border-white shadow-md" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80';" />
+      </div>
+    )
+  }
+  <div class="flex-1">
+    <blockquote class="p-4">
+      <div class="relative">
+        <span class="absolute -top-10 -left-8 text-6xl md:text-7xl text-primary/20">"</span>
+        <p class="italic text-text mb-6 relative z-10 text-base md:text-lg leading-relaxed px-4">{quote}</p>
+        <span class="absolute -bottom-14 -right-8 text-6xl md:text-7xl text-primary/20">"</span>
+      </div>
+      <footer class="font-bold text-secondary mt-6 text-lg px-4">{author}</footer>
+    </blockquote>
+  </div>
+</div>

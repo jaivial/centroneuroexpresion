@@ -1,11 +1,186 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
+import Button from "../components/Button.astro";
+import Testimonial from "../components/Testimonial.astro";
+import CallToAction from "../components/CallToAction.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const servicios = [
+  {
+    title: "Intervención Cognitiva",
+    icon: "cognitive",
+    description: "Enfocada en mejorar el desarrollo cognitivo, emocional y social en niños menores de seis años.",
+    link: "/intervencion-cognitiva",
+    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Intervención Lingüística",
+    icon: "linguistic",
+    description: "Detecta, evalúa y trata posibles alteraciones en el desarrollo del lenguaje en niños menores de 6 años.",
+    link: "/intervencion-linguistica",
+    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Intervención Prenatal",
+    icon: "prenatal",
+    description: "Actividades realizadas antes del nacimiento para promover el desarrollo integral del bebé.",
+    link: "/intervencion-prenatal",
+    image: "https://images.unsplash.com/photo-1584814169175-a154985e4517?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Intervención Sensoriomotora",
+    icon: "sensorimotor",
+    description: "Enfoque terapéutico para bebés y niños con dificultades en el procesamiento sensorial y desarrollo motor.",
+    link: "/intervencion-sensoriomotora",
+    image: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+  },
+];
+
+const testimonios = [
+  {
+    quote: "El centro ha transformado el desarrollo de nuestro hijo. Hemos visto un progreso increíble en solo unos meses.",
+    author: "María G., Madre",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    quote: "Los terapeutas son increíblemente hábiles y pacientes. Han ayudado a nuestro hijo a ganar confianza y nuevas habilidades.",
+    author: "Carlos R., Padre",
+    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+  },
+];
+
+const caracteristicas = [
+  {
+    title: "Enfoque Personalizado",
+    description: "Cada niño recibe un plan de intervención adaptado a sus necesidades específicas.",
+    icon: "personalized",
+  },
+  {
+    title: "Equipo Multidisciplinario",
+    description: "Profesionales especializados trabajando juntos para proporcionar una atención integral.",
+    icon: "team",
+  },
+  {
+    title: "Participación Familiar",
+    description: "Involucramos a las familias en el proceso de intervención para maximizar los resultados.",
+    icon: "family",
+  },
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="Inicio" description="El Centro de Intervención Temprana ofrece servicios especializados para niños con necesidades de desarrollo desde el nacimiento hasta los seis años.">
+  <Hero title="Apoyando el Desarrollo de tu Hijo" subtitle="Servicios especializados de intervención temprana para niños desde el nacimiento hasta los seis años" image="https://images.unsplash.com/photo-1605627079912-97c3810a11a4?q=80&w=3807&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <Button href="/contacto" variant="primary">Programar una Consulta</Button>
+    <Button href="/servicios" variant="secondary" class="text-lg">Nuestros Servicios</Button>
+  </Hero>
+
+  <!-- Espaciador -->
+  <div class="h-32 md:h-40"></div>
+
+  <!-- Características -->
+  <section class="py-24 bg-gradient-to-b from-white to-pink-300/10 rounded-3xl mx-4 md:mx-6 my-16 mb-0">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-primary mb-6 text-3xl md:text-4xl font-bold">Nuestro Enfoque</h2>
+        <p class="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed px-4">Creemos en un enfoque integral y personalizado para cada niño</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {
+          caracteristicas.map((caracteristica) => (
+            <div class="text-center bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 mb-4 md:mb-0">
+              <div class="mb-6 inline-flex items-center justify-center w-28 h-28 rounded-full bg-primary/20 text-primary">
+                <span class="text-5xl">{caracteristica.icon === "personalized" ? "👤" : caracteristica.icon === "team" ? "👥" : "👨‍👩‍👧‍👦"}</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-4 text-secondary">{caracteristica.title}</h3>
+              <p class="leading-relaxed text-lg px-4">{caracteristica.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Espaciador
+  <div class="h-32 md:h-40"></div> -->
+
+  <!-- Introducción -->
+  <section class="py-24 pt-24 bg-gradient-to-b from-pink-300/10 to-white backdrop-blur-sm rounded-3xl mx-4 md:mx-6 my-16 mt-0">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+        <div class="relative mb-8 md:mb-0">
+          <div class="absolute -top-8 -left-8 w-40 h-40 bg-primary/20 rounded-full -z-10"></div>
+          <div class="absolute -bottom-8 -right-8 w-48 h-48 bg-secondary/20 rounded-full -z-10"></div>
+          <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Niños en terapia" class="rounded-2xl shadow-lg w-full h-auto object-cover aspect-video relative z-10" />
+        </div>
+        <div class="gap-4 flex flex-col">
+          <h2 class="mb-12 text-primary text-3xl md:text-4xl font-bold text-center">Servicios de Intervención Temprana</h2>
+          <p class="mb-4 text-lg md:text-xl leading-relaxed">Los Servicios de Intervención Temprana son programas de apoyo especializados diseñados para niños desde el nacimiento hasta los seis años de edad que tienen retrasos en el desarrollo o están en riesgo de desarrollarlos.</p>
+          <p class="mb-4 text-lg leading-relaxed">Estos servicios tienen como objetivo mejorar el desarrollo del niño, minimizar los retrasos del desarrollo y proporcionar a las familias las herramientas y el apoyo necesarios para ayudar a sus hijos a prosperar.</p>
+          <p class="mb-4 text-lg leading-relaxed">Nuestro centro ofrece servicios integrales de intervención temprana en cuatro áreas clave del desarrollo:</p>
+          <Button href="/servicios" variant="primary" class="mt-6 text-lg py-3 px-6 w-fit mx-auto">Conoce Nuestros Servicios</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Espaciador -->
+
+  <!-- Servicios -->
+  <section class="py-24 bg-gradient-to-b from-white to-primary/10 rounded-3xl mx-4 md:mx-6 my-16">
+    <div class="max-w-7xl mx-auto px-8 md:px-12">
+      <div class="text-center mb-12">
+        <h2 class="text-secondary mb-6 text-3xl md:text-4xl font-bold">Nuestros Servicios</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed px-4">Servicios integrales de intervención temprana adaptados a las necesidades únicas de cada niño</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+        {
+          servicios.map((servicio) => (
+            <Card title={servicio.title} image={servicio.image} alt={servicio.title} link={servicio.link}>
+              <p class="leading-relaxed">{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+
+      <div class="text-center mt-16">
+        <Button href="/servicios" variant="secondary" class="text-lg py-3 px-6">Ver Todos los Servicios</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Espaciador -->
+
+  <!-- Testimonios -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-primary mb-6 text-3xl md:text-4xl font-bold">Historias de Éxito</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed px-4">Escucha a las familias que han experimentado la diferencia que nuestros servicios marcan</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {
+          testimonios.map((testimonio) => (
+            <div class="bg-white p-8 rounded-2xl shadow-md border border-light-gray hover:shadow-lg transition-all duration-300 mb-8 md:mb-0">
+              <Testimonial quote={testimonio.quote} author={testimonio.author} image={testimonio.image} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Espaciador -->
+
+  <!-- Llamada a la acción -->
+  <CallToAction title="¿Listo para comenzar el viaje de tu hijo?" description="Nuestro equipo de especialistas está aquí para apoyar a tu familia en cada paso del camino." buttonText="Contáctanos Hoy" buttonLink="/contacto" class="bg-gradient-to-r from-primary/90 to-accent/90 backdrop-blur-md">
+    <div class="absolute inset-0 bg-pink-300/30 blur-xl -z-10"></div>
+    <div class="absolute -top-20 -left-20 w-64 h-64 bg-pink-400/20 rounded-full blur-3xl -z-10"></div>
+    <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-pink-400/20 rounded-full blur-3xl -z-10"></div>
+  </CallToAction>
+
+  <!-- Espaciador final -->
+  <div class="h-32 md:h-40"></div>
+</MainLayout>

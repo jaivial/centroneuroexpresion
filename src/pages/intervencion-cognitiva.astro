@@ -1,0 +1,199 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import CallToAction from "../components/CallToAction.astro";
+
+const serviciosNinos = [
+  {
+    title: "Sesiones de estimulación cognitiva",
+    description: "Sesiones individuales o en pequeños grupos diseñadas para estimular el desarrollo cognitivo a través de actividades lúdicas y estructuradas.",
+    icon: "brain",
+  },
+  {
+    title: "Intervención para niños con discapacidad intelectual",
+    description: "Programas personalizados para niños con discapacidad intelectual, centrados en potenciar sus capacidades y mejorar su autonomía.",
+    icon: "puzzle",
+  },
+  {
+    title: "Actividades para niños con altas capacidades",
+    description: "Programas de enriquecimiento para niños con altas capacidades, diseñados para estimular su potencial y prevenir el aburrimiento o la desmotivación.",
+    icon: "lightbulb",
+  },
+];
+
+const serviciosFamilias = [
+  {
+    title: "Cursos de formación para familias",
+    description: "Talleres y cursos para familias sobre cómo estimular el desarrollo cognitivo de sus hijos en el hogar.",
+    icon: "home",
+  },
+  {
+    title: "Apoyo a familias de niños con discapacidad",
+    description: "Grupos de apoyo y asesoramiento individualizado para familias de niños con discapacidad intelectual.",
+    icon: "heart",
+  },
+  {
+    title: "Recursos para familias de niños con altas capacidades",
+    description: "Materiales y estrategias para familias de niños con altas capacidades, para ayudarles a comprender y apoyar las necesidades de sus hijos.",
+    icon: "book",
+  },
+];
+
+const serviciosEducadores = [
+  {
+    title: "Desarrollo profesional para educadores",
+    description: "Cursos y talleres para educadores sobre cómo implementar estrategias de estimulación cognitiva en el aula.",
+    icon: "school",
+  },
+  {
+    title: "Servicios de consulta para educadores",
+    description: "Asesoramiento a educadores sobre cómo adaptar el currículo y las actividades para niños con necesidades especiales.",
+    icon: "chat",
+  },
+];
+
+const beneficios = [
+  {
+    title: "Mejora de la atención y concentración",
+    description: "Los niños desarrollan una mayor capacidad para mantener la atención y concentrarse en tareas específicas.",
+    icon: "focus",
+  },
+  {
+    title: "Desarrollo del pensamiento lógico",
+    description: "Fortalecimiento de las habilidades de razonamiento, resolución de problemas y pensamiento crítico.",
+    icon: "logic",
+  },
+  {
+    title: "Estimulación de la memoria",
+    description: "Mejora de la memoria a corto y largo plazo, fundamental para el aprendizaje y el desarrollo cognitivo.",
+    icon: "memory",
+  },
+  {
+    title: "Potenciación de la creatividad",
+    description: "Fomento del pensamiento divergente y la capacidad para generar ideas originales y soluciones innovadoras.",
+    icon: "creativity",
+  },
+];
+---
+
+<MainLayout title="Intervención Cognitiva" description="Servicios de intervención cognitiva temprana para niños desde el nacimiento hasta los seis años de edad.">
+  <Hero title="Intervención Cognitiva Temprana" subtitle="Potenciando el desarrollo cognitivo, emocional y social de los niños" image="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+    <Button href="/contacto" variant="primary">Programar una Consulta</Button>
+  </Hero>
+
+  <!-- Introducción -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>¿Qué es la Intervención Cognitiva Temprana?</h2>
+        <p class="mt-2 max-w-3xl mx-auto">La Intervención Cognitiva Temprana (ITC) se centra en mejorar el desarrollo cognitivo, emocional y social en niños menores de seis años. Esta área de intervención es crucial ya que se dirige al desarrollo de habilidades cognitivas esenciales como la memoria, la atención, la resolución de problemas y el razonamiento lógico.</p>
+        <p class="mt-2 max-w-3xl mx-auto">La ITC es especialmente importante durante los primeros años de vida debido a la alta plasticidad cerebral, que permite una mayor adaptación y recuperación ante posibles dificultades. Nuestro enfoque se basa en la evidencia científica y se adapta a las necesidades individuales de cada niño y familia.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Niño en sesión de intervención cognitiva" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <h3 class="mb-4">Importancia de la Intervención Temprana</h3>
+          <p>La intervención temprana es crucial porque el cerebro de los niños se desarrolla rápidamente durante los primeros años de vida. Durante este período, se forman conexiones neuronales que sientan las bases para el aprendizaje futuro. La intervención temprana puede:</p>
+          <ul class="list-disc pl-6 mt-4 space-y-2">
+            <li>Prevenir o minimizar retrasos en el desarrollo</li>
+            <li>Reducir la necesidad de servicios especiales en el futuro</li>
+            <li>Maximizar el potencial de desarrollo del niño</li>
+            <li>Proporcionar apoyo y recursos a las familias</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Niños -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Niños</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Ofrecemos una variedad de servicios diseñados específicamente para apoyar el desarrollo cognitivo de los niños, adaptados a sus necesidades individuales y etapa de desarrollo.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {
+          serviciosNinos.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+
+      <div class="mt-8">
+        <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niños en actividades de estimulación cognitiva" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Familias -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Familias</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Reconocemos el papel fundamental de la familia en el desarrollo del niño. Por eso, ofrecemos servicios diseñados para empoderar a las familias con conocimientos, habilidades y recursos.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {
+          serviciosFamilias.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios para Educadores -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios para Educadores</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Colaboramos con educadores para crear entornos educativos que apoyen el desarrollo cognitivo de todos los niños, incluidos aquellos con necesidades especiales.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          serviciosEducadores.map((servicio) => (
+            <Card title={servicio.title} icon={servicio.icon}>
+              <p>{servicio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Beneficios de la Intervención Cognitiva Temprana</h2>
+        <p class="mt-2 max-w-3xl mx-auto">La intervención cognitiva temprana ofrece numerosos beneficios para el desarrollo integral del niño, sentando las bases para un aprendizaje exitoso a lo largo de su vida.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          beneficios.map((beneficio) => (
+            <Card title={beneficio.title} icon={beneficio.icon}>
+              <p>{beneficio.description}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Llamada a la acción -->
+  <CallToAction title="¿Listo para potenciar el desarrollo cognitivo de tu hijo?" description="Nuestro equipo de especialistas está disponible para evaluar las necesidades de tu hijo y diseñar un plan de intervención personalizado." buttonText="Contáctanos" buttonLink="/contacto" />
+</MainLayout>

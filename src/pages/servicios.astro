@@ -1,0 +1,93 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import CallToAction from "../components/CallToAction.astro";
+
+const servicios = [
+  {
+    id: "intervencion-cognitiva",
+    title: "Intervención Cognitiva",
+    description: "La Intervención Cognitiva Temprana (ITC) se centra en mejorar el desarrollo cognitivo, emocional y social en niños menores de seis años. Esta área de intervención es crucial ya que se dirige al desarrollo de habilidades cognitivas esenciales como la memoria, la atención, la resolución de problemas y el razonamiento lógico.",
+    details: ["Sesiones de estimulación para niños", "Intervención para niños con discapacidad intelectual", "Actividades para niños con altas capacidades", "Cursos de formación para familias", "Apoyo a familias de niños con discapacidad", "Recursos para familias de niños con altas capacidades", "Desarrollo profesional para educadores", "Servicios de consulta para educadores"],
+    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    link: "/intervencion-cognitiva",
+  },
+  {
+    id: "intervencion-linguistica",
+    title: "Intervención Lingüística",
+    description: "La Intervención Lingüística Temprana se centra en detectar, evaluar y tratar posibles alteraciones en el desarrollo del lenguaje en niños menores de 6 años. Esta intervención es vital debido a la alta plasticidad del cerebro durante los primeros años, lo que permite una mayor adaptación y recuperación al enfrentar dificultades lingüísticas.",
+    details: ["Sesiones de estimulación para niños", "Intervención para niños con problemas de lenguaje", "Cursos de formación para familias", "Cursos para familias de niños con problemas de lenguaje", "Formación para estimular el desarrollo en educadores", "Formación para maestros de niños con problemas de lenguaje"],
+    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    link: "/intervencion-linguistica",
+  },
+  {
+    id: "intervencion-prenatal",
+    title: "Intervención Prenatal",
+    description: "La Intervención Prenatal Temprana abarca actividades realizadas antes del nacimiento para promover el desarrollo integral del bebé. Esto incluye estimulación auditiva, táctil, motora y visual dirigida a mejorar el desarrollo cognitivo, emocional y sensorial del feto mientras se establece una comunicación afectiva entre el bebé por nacer y los padres.",
+    details: ["Sesiones de estimulación prenatal", "Estimulación para embarazos de alto riesgo", "Cursos de formación para parejas expectantes", "Formación para miembros de la familia extendida"],
+    image: "https://images.unsplash.com/photo-1516627145497-ae6968895b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    link: "/intervencion-prenatal",
+  },
+  {
+    id: "intervencion-sensoriomotora",
+    title: "Intervención Sensoriomotora",
+    description:
+      "La Intervención Sensoriomotora Temprana es un enfoque terapéutico para bebés y niños con dificultades en el procesamiento sensorial y el desarrollo motor. Esta intervención se basa en la premisa de que los primeros años son esenciales para el desarrollo cerebral debido a la alta plasticidad neuronal, lo que hace crucial abordar las alteraciones de la percepción sensorial y las habilidades motoras lo antes posible.",
+    details: ["Estimulación sensoriomotora para niños menores de 12 años", "Intervención para niños con diversidad funcional", "Escuela familiar - Estimulación sensoriomotora en el hogar", "Orientación para familias de niños con diversidad funcional", "Evaluación sensoriomotora de estudiantes", "Orientación para maestros sobre diversidad funcional"],
+    image: "https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    link: "/intervencion-sensoriomotora",
+  },
+];
+---
+
+<MainLayout title="Servicios" description="Servicios de intervención temprana para niños desde el nacimiento hasta los seis años de edad.">
+  <Hero title="Nuestros Servicios" subtitle="Servicios especializados de intervención temprana para potenciar el desarrollo de tu hijo" image="https://images.unsplash.com/photo-1516627145497-ae6968895b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+    <Button href="/contacto" variant="primary">Programar una Consulta</Button>
+  </Hero>
+
+  <!-- Introducción a los Servicios -->
+  <section class="py-12 bg-background">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2>Servicios de Intervención Temprana</h2>
+        <p class="mt-2 max-w-3xl mx-auto">
+          Los Servicios de Intervención Temprana son programas de apoyo especializados diseñados para niños desde el nacimiento hasta los seis años de edad que tienen retrasos en el desarrollo o están en riesgo de desarrollarlos. Estos servicios tienen como objetivo mejorar el desarrollo del niño, minimizar los retrasos del desarrollo y proporcionar a las familias las
+          herramientas y el apoyo necesarios para ayudar a sus hijos a prosperar.
+        </p>
+        <p class="mt-2 max-w-3xl mx-auto">Nuestro centro ofrece servicios integrales de intervención temprana en cuatro áreas clave del desarrollo:</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listado de Servicios -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      {
+        servicios.map((servicio, index) => (
+          <div class={`flex flex-col md:flex-row gap-6 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""} mb-12`}>
+            <div class="w-full md:w-1/2">
+              <img src={servicio.image} alt={servicio.title} class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+            </div>
+            <div class="w-full md:w-1/2">
+              <h3 class="text-2xl font-bold mb-4">{servicio.title}</h3>
+              <p class="mb-6">{servicio.description}</p>
+              <ul class="list-disc pl-6 mb-6 space-y-2">
+                {servicio.details.map((detail) => (
+                  <li>{detail}</li>
+                ))}
+              </ul>
+              <Button href={servicio.link} variant="primary">
+                Más Información
+              </Button>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Llamada a la acción -->
+  <CallToAction title="¿Necesitas más información sobre nuestros servicios?" description="Nuestro equipo de especialistas está disponible para responder a todas tus preguntas y ayudarte a encontrar el mejor servicio para tu hijo." buttonText="Contáctanos" buttonLink="/contacto" />
+</MainLayout>

@@ -1,0 +1,162 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
+import Button from "../components/Button.astro";
+
+const team = [
+  {
+    name: "Dr. Maria Rodriguez",
+    role: "Director & Speech Therapist",
+    bio: "With over 15 years of experience in pediatric speech therapy, Dr. Rodriguez leads our center with passion and expertise.",
+    image: "/team/director.jpg",
+  },
+  {
+    name: "Carlos Mendez",
+    role: "Occupational Therapist",
+    bio: "Specialized in sensory integration and fine motor skills development for children with diverse needs.",
+    image: "/team/occupational.jpg",
+  },
+  {
+    name: "Ana Gomez",
+    role: "Physical Therapist",
+    bio: "Dedicated to helping children develop strength, coordination, and mobility through playful therapeutic approaches.",
+    image: "/team/physical.jpg",
+  },
+  {
+    name: "Sofia Perez",
+    role: "Child Psychologist",
+    bio: "Provides emotional and behavioral support for children and guidance for families navigating developmental challenges.",
+    image: "/team/psychologist.jpg",
+  },
+];
+---
+
+<MainLayout title="About Us" description="Learn about our center's mission, our team of specialists, and our approach to early intervention.">
+  <Hero title="About Our Center" subtitle="Dedicated to supporting children's development through specialized early intervention" image="/images/about-hero.jpg" />
+
+  <!-- Mission Section -->
+  <section class="py-2xl bg-background">
+    <div class="max-w-7xl mx-auto px-md md:px-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+        <div>
+          <h2 class="mb-md">Our Mission</h2>
+          <p class="mb-md">At Centro de Intervención Temprana, we are dedicated to providing high-quality early intervention services that support children's development and empower families. We believe that every child deserves the opportunity to reach their full potential.</p>
+          <p class="mb-md">Our interdisciplinary team works collaboratively to address each child's unique needs, creating personalized intervention plans that build on strengths and address challenges.</p>
+          <p>We partner with families, recognizing them as the most important influence in their child's life, and provide them with the tools and support they need to foster their child's development.</p>
+        </div>
+        <div class="order-first md:order-last">
+          <img src="/images/mission.jpg" alt="Children playing and learning" class="w-full h-auto rounded-image shadow-card" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-2xl bg-mint/20">
+    <div class="max-w-7xl mx-auto px-md md:px-lg">
+      <div class="text-center mb-xl">
+        <h2>Our Values</h2>
+        <p class="mt-sm max-w-2xl mx-auto">The principles that guide our approach to early intervention</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+        <div class="text-center p-lg">
+          <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-md">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path>
+            </svg>
+          </div>
+          <h3 class="mb-sm">Child-Centered</h3>
+          <p>We place each child's unique needs, strengths, and interests at the center of our intervention approach.</p>
+        </div>
+
+        <div class="text-center p-lg">
+          <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-md">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="mb-sm">Family Collaboration</h3>
+          <p>We partner with families, respecting their knowledge and empowering them to support their child's development.</p>
+        </div>
+
+        <div class="text-center p-lg">
+          <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-md">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="mb-sm">Evidence-Based Practice</h3>
+          <p>We implement intervention strategies backed by research while adapting to each child's individual needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-2xl bg-background">
+    <div class="max-w-7xl mx-auto px-md md:px-lg">
+      <div class="text-center mb-xl">
+        <h2>Our Team</h2>
+        <p class="mt-sm max-w-2xl mx-auto">Meet our dedicated specialists committed to supporting your child's development</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+        {
+          team.map((member) => (
+            <Card title={member.name} image={member.image} alt={`Photo of ${member.name}`}>
+              <p class="text-primary font-bold mb-sm">{member.role}</p>
+              <p>{member.bio}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Facility Section -->
+  <section class="py-2xl bg-lavender/20">
+    <div class="max-w-7xl mx-auto px-md md:px-lg">
+      <div class="text-center mb-xl">
+        <h2>Our Facility</h2>
+        <p class="mt-sm max-w-2xl mx-auto">A safe, welcoming environment designed to support therapeutic interventions and child development</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+        <div>
+          <img src="/images/facility-1.jpg" alt="Sensory play area" class="w-full h-auto rounded-image shadow-card mb-md" />
+          <h3 class="mb-sm">Sensory Play Area</h3>
+          <p>Designed to provide diverse sensory experiences that support development and regulation.</p>
+        </div>
+
+        <div>
+          <img src="/images/facility-2.jpg" alt="Motor skills gym" class="w-full h-auto rounded-image shadow-card mb-md" />
+          <h3 class="mb-sm">Motor Skills Gym</h3>
+          <p>Equipped with specialized equipment to develop gross motor skills, balance, and coordination.</p>
+        </div>
+
+        <div>
+          <img src="/images/facility-3.jpg" alt="Communication therapy room" class="w-full h-auto rounded-image shadow-card mb-md" />
+          <h3 class="mb-sm">Communication Therapy Rooms</h3>
+          <p>Quiet, focused environments for speech and language therapy sessions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-2xl">
+    <div class="max-w-7xl mx-auto px-md md:px-lg text-center">
+      <h2 class="text-white mb-md">Ready to Visit Our Center?</h2>
+      <p class="text-white/90 max-w-2xl mx-auto mb-lg">Schedule a tour to meet our team and learn more about our services.</p>
+      <Button href="/contact" variant="secondary" class="inline-block">Contact Us Today</Button>
+    </div>
+  </section>
+</MainLayout>
+
