@@ -12,28 +12,28 @@ const servicios = [
     icon: "cognitive",
     description: "Enfocada en mejorar el desarrollo cognitivo, emocional y social en niños menores de seis años.",
     link: "/intervencion-cognitiva",
-    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    image: "https://www.ortopediamimas.com/blog-de-ortopedia/wp-content/uploads/2020/06/juegos-estimulacion-cognitiva.jpg",
   },
   {
     title: "Intervención Lingüística",
     icon: "linguistic",
     description: "Detecta, evalúa y trata posibles alteraciones en el desarrollo del lenguaje en niños menores de 6 años.",
     link: "/intervencion-linguistica",
-    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    image: "https://ceiap.uazuay.edu.ec/sites/ceiap.uazuay.edu.ec/files/public/2022-05/5-juegos-para-estimular-el-lenguaje-ninos-pequenos-620x349.jpg",
   },
   {
     title: "Intervención Prenatal",
     icon: "prenatal",
     description: "Actividades realizadas antes del nacimiento para promover el desarrollo integral del bebé.",
     link: "/intervencion-prenatal",
-    image: "https://images.unsplash.com/photo-1584814169175-a154985e4517?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    image: "https://letsfamily.es/wp-content/uploads/2018/08/estimulacion-prenatal-1.jpg",
   },
   {
     title: "Intervención Sensoriomotora",
     icon: "sensorimotor",
     description: "Enfoque terapéutico para bebés y niños con dificultades en el procesamiento sensorial y desarrollo motor.",
     link: "/intervencion-sensoriomotora",
-    image: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    image: "https://cdn.shopify.com/s/files/1/0784/0107/7584/files/juegos-de-estimulacion-sensorial-para-bebes.jpg?v=1708084821",
   },
 ];
 
@@ -69,14 +69,13 @@ const caracteristicas = [
 ];
 ---
 
-<MainLayout title="Inicio" description="El Centro de Intervención Temprana ofrece servicios especializados para niños con necesidades de desarrollo desde el nacimiento hasta los seis años.">
-  <Hero title="Apoyando el Desarrollo de tu Hijo" subtitle="Servicios especializados de intervención temprana para niños desde el nacimiento hasta los seis años" image="https://images.unsplash.com/photo-1605627079912-97c3810a11a4?q=80&w=3807&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+<MainLayout title="Inicio" description="El Centro de Intervención Temprana ofrece servicios especializados para niños con necesidades de desarrollo desde el nacimiento hasta los doce años.">
+  <Hero title="Apoyando el Desarrollo de tu Hijo" subtitle="Servicios especializados de intervención temprana para niños desde el nacimiento hasta los doce años" image="https://images.unsplash.com/photo-1605627079912-97c3810a11a4?q=80&w=3807&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     <Button href="/contacto" variant="primary">Programar una Consulta</Button>
     <Button href="/servicios" variant="secondary" class="text-lg">Nuestros Servicios</Button>
   </Hero>
 
   <!-- Espaciador -->
-  <div class="h-32 md:h-40"></div>
 
   <!-- Características -->
   <section class="py-24 bg-gradient-to-b from-white to-pink-300/10 rounded-3xl mx-4 md:mx-6 my-16 mb-0">
@@ -88,7 +87,7 @@ const caracteristicas = [
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {
           caracteristicas.map((caracteristica) => (
-            <div class="text-center bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 mb-4 md:mb-0">
+            <div class="text-center bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 mb-4 md:mb-0 border border-pink-400">
               <div class="mb-6 inline-flex items-center justify-center w-28 h-28 rounded-full bg-primary/20 text-primary">
                 <span class="text-5xl">{caracteristica.icon === "personalized" ? "👤" : caracteristica.icon === "team" ? "👥" : "👨‍👩‍👧‍👦"}</span>
               </div>
@@ -127,7 +126,7 @@ const caracteristicas = [
   <!-- Espaciador -->
 
   <!-- Servicios -->
-  <section class="py-24 bg-gradient-to-b from-white to-primary/10 rounded-3xl mx-4 md:mx-6 my-16">
+  <section class="py-24 pt-2 bg-gradient-to-b from-white to-primary/10 rounded-3xl mx-4 md:mx-6 my-16 mt-0">
     <div class="max-w-7xl mx-auto px-8 md:px-12">
       <div class="text-center mb-12">
         <h2 class="text-secondary mb-6 text-3xl md:text-4xl font-bold">Nuestros Servicios</h2>
