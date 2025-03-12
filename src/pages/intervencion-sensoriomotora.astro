@@ -69,17 +69,10 @@ const beneficios = [
   </Hero>
 
   <!-- Introducción -->
-  <section class="py-12 bg-background">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
-      <div class="text-center mb-8">
-        <h2>¿Qué es la Intervención Sensoriomotora Temprana?</h2>
-        <p class="mt-2 max-w-3xl mx-auto">
-          La Intervención Sensoriomotora Temprana es un enfoque terapéutico para bebés y niños con dificultades en el procesamiento sensorial y el desarrollo motor. Esta intervención se basa en la premisa de que los primeros años son esenciales para el desarrollo cerebral debido a la alta plasticidad neuronal, lo que hace crucial abordar las alteraciones de la percepción
-          sensorial y las habilidades motoras lo antes posible.
-        </p>
-        <p class="mt-2 max-w-3xl mx-auto">Nuestro enfoque se centra en proporcionar experiencias sensoriales y motoras adecuadas para promover el desarrollo óptimo del sistema nervioso, mejorando la capacidad del niño para procesar la información sensorial y desarrollar habilidades motoras apropiadas para su edad.</p>
-      </div>
-
+  <section class="py-12 bg-background relative overflow-hidden">
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 -right-48 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl transform -translate-y-1/2"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Niño en sesión de intervención sensoriomotora" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
@@ -99,10 +92,12 @@ const beneficios = [
   </section>
 
   <!-- Servicios para Niños -->
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 relative overflow-hidden">
+    <div class="absolute top-1/4 right-0 w-80 h-80 bg-pink-300/30 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-1/4 left-0 w-80 h-80 bg-pink-400/30 rounded-full blur-2xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-8">
-        <h2>Servicios para Niños</h2>
+        <h2 class="text-pink-700 font-bold">Servicios para Niños</h2>
         <p class="mt-2 max-w-3xl mx-auto">Ofrecemos una variedad de servicios diseñados específicamente para apoyar el desarrollo sensoriomotor de los niños, adaptados a sus necesidades individuales y etapa de desarrollo.</p>
       </div>
 
@@ -116,8 +111,9 @@ const beneficios = [
         }
       </div>
 
-      <div class="mt-8">
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niños en actividades de estimulación sensoriomotora" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        <img src="https://images.unsplash.com/photo-1599552683573-9dc48255fe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niño en terapia sensoriomotora" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
       </div>
     </div>
   </section>
@@ -126,7 +122,7 @@ const beneficios = [
   <section class="py-12 bg-background">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
       <div class="text-center mb-8">
-        <h2>Servicios para Familias</h2>
+        <h2 class="text-pink-700 font-bold">Servicios para Familias</h2>
         <p class="mt-2 max-w-3xl mx-auto">Reconocemos el papel fundamental de la familia en el desarrollo sensoriomotor del niño. Por eso, ofrecemos servicios diseñados para empoderar a las familias con conocimientos, habilidades y recursos.</p>
       </div>
 
@@ -139,6 +135,10 @@ const beneficios = [
           ))
         }
       </div>
+
+      <div class="mt-8">
+        <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Familia participando en actividades de desarrollo" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+      </div>
     </div>
   </section>
 
@@ -146,7 +146,7 @@ const beneficios = [
   <section class="py-12">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
       <div class="text-center mb-8">
-        <h2>Servicios para Educadores</h2>
+        <h2 class="text-pink-700 font-bold">Servicios para Educadores</h2>
         <p class="mt-2 max-w-3xl mx-auto">Colaboramos con educadores para crear entornos educativos que apoyen el desarrollo sensoriomotor de todos los niños, incluidos aquellos con necesidades especiales.</p>
       </div>
 
@@ -159,18 +159,25 @@ const beneficios = [
           ))
         }
       </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Educadores en formación" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Educadores trabajando con niños" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+      </div>
     </div>
   </section>
 
   <!-- Beneficios -->
-  <section class="py-12 bg-background">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 bg-background relative overflow-hidden">
+    <div class="absolute top-1/4 left-0 w-80 h-80 bg-pink-300/30 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-1/4 right-0 w-80 h-80 bg-pink-400/30 rounded-full blur-2xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-8">
-        <h2>Beneficios de la Intervención Sensoriomotora Temprana</h2>
-        <p class="mt-2 max-w-3xl mx-auto">La intervención sensoriomotora temprana ofrece numerosos beneficios para el desarrollo integral del niño, sentando las bases para un aprendizaje exitoso y una participación plena en la vida diaria.</p>
+        <h2 class="text-pink-700 font-bold">Beneficios de la Intervención Sensoriomotora Temprana</h2>
+        <p class="mt-2 max-w-3xl mx-auto">La intervención sensoriomotora temprana ofrece numerosos beneficios para el desarrollo integral del niño, sentando las bases para un desarrollo físico, cognitivo y emocional saludable.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {
           beneficios.map((beneficio) => (
             <Card title={beneficio.title} icon={beneficio.icon}>
@@ -178,6 +185,11 @@ const beneficios = [
             </Card>
           ))
         }
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niño desarrollando habilidades motoras" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niños en actividades sensoriales" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
       </div>
     </div>
   </section>

@@ -84,14 +84,10 @@ const beneficios = [
   </Hero>
 
   <!-- Introducción -->
-  <section class="py-12 bg-background">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
-      <div class="text-center mb-8">
-        <h2>¿Qué es la Intervención Cognitiva Temprana?</h2>
-        <p class="mt-2 max-w-3xl mx-auto">La Intervención Cognitiva Temprana (ITC) se centra en mejorar el desarrollo cognitivo, emocional y social en niños menores de seis años. Esta área de intervención es crucial ya que se dirige al desarrollo de habilidades cognitivas esenciales como la memoria, la atención, la resolución de problemas y el razonamiento lógico.</p>
-        <p class="mt-2 max-w-3xl mx-auto">La ITC es especialmente importante durante los primeros años de vida debido a la alta plasticidad cerebral, que permite una mayor adaptación y recuperación ante posibles dificultades. Nuestro enfoque se basa en la evidencia científica y se adapta a las necesidades individuales de cada niño y familia.</p>
-      </div>
-
+  <section class="py-24 bg-background relative overflow-hidden">
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 -right-48 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl transform -translate-y-1/2"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Niño en sesión de intervención cognitiva" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
@@ -111,10 +107,12 @@ const beneficios = [
   </section>
 
   <!-- Servicios para Niños -->
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 relative overflow-hidden">
+    <div class="absolute top-1/4 right-0 w-80 h-80 bg-pink-300/30 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-1/4 left-0 w-80 h-80 bg-pink-400/30 rounded-full blur-2xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-8">
-        <h2>Servicios para Niños</h2>
+        <h2 class="text-pink-700 font-bold">Servicios para Niños</h2>
         <p class="mt-2 max-w-3xl mx-auto">Ofrecemos una variedad de servicios diseñados específicamente para apoyar el desarrollo cognitivo de los niños, adaptados a sus necesidades individuales y etapa de desarrollo.</p>
       </div>
 
@@ -128,21 +126,24 @@ const beneficios = [
         }
       </div>
 
-      <div class="mt-8">
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niños en actividades de estimulación cognitiva" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niño desarrollando habilidades cognitivas" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
       </div>
     </div>
   </section>
 
   <!-- Servicios para Familias -->
-  <section class="py-12 bg-background">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 relative overflow-hidden">
+    <div class="absolute top-1/4 left-0 w-80 h-80 bg-pink-300/30 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-1/4 right-0 w-80 h-80 bg-pink-400/30 rounded-full blur-2xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-8">
-        <h2>Servicios para Familias</h2>
-        <p class="mt-2 max-w-3xl mx-auto">Reconocemos el papel fundamental de la familia en el desarrollo del niño. Por eso, ofrecemos servicios diseñados para empoderar a las familias con conocimientos, habilidades y recursos.</p>
+        <h2 class="text-pink-700 font-bold">Servicios para Familias</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Ofrecemos apoyo y recursos para las familias, ayudándoles a comprender y fomentar el desarrollo cognitivo de sus hijos en el hogar.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {
           serviciosFamilias.map((servicio) => (
             <Card title={servicio.title} icon={servicio.icon}>
@@ -151,15 +152,21 @@ const beneficios = [
           ))
         }
       </div>
+
+      <div class="mt-8">
+        <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Familia participando en actividades de desarrollo" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+      </div>
     </div>
   </section>
 
   <!-- Servicios para Educadores -->
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 relative overflow-hidden">
+    <div class="absolute top-1/4 right-0 w-80 h-80 bg-pink-300/30 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-1/4 left-0 w-80 h-80 bg-pink-400/30 rounded-full blur-2xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-8">
-        <h2>Servicios para Educadores</h2>
-        <p class="mt-2 max-w-3xl mx-auto">Colaboramos con educadores para crear entornos educativos que apoyen el desarrollo cognitivo de todos los niños, incluidos aquellos con necesidades especiales.</p>
+        <h2 class="text-pink-700 font-bold">Servicios para Educadores</h2>
+        <p class="mt-2 max-w-3xl mx-auto">Proporcionamos formación y recursos para educadores, ayudándoles a implementar estrategias efectivas para el desarrollo cognitivo en el aula.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -171,15 +178,22 @@ const beneficios = [
           ))
         }
       </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Educadores en formación" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Educadores trabajando con niños" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+      </div>
     </div>
   </section>
 
   <!-- Beneficios -->
-  <section class="py-12 bg-background">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 relative overflow-hidden">
+    <div class="absolute top-1/4 left-0 w-80 h-80 bg-pink-300/30 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-1/4 right-0 w-80 h-80 bg-pink-400/30 rounded-full blur-2xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-8">
-        <h2>Beneficios de la Intervención Cognitiva Temprana</h2>
-        <p class="mt-2 max-w-3xl mx-auto">La intervención cognitiva temprana ofrece numerosos beneficios para el desarrollo integral del niño, sentando las bases para un aprendizaje exitoso a lo largo de su vida.</p>
+        <h2 class="text-pink-700 font-bold">Beneficios de la Intervención Cognitiva Temprana</h2>
+        <p class="mt-2 max-w-3xl mx-auto">La intervención cognitiva temprana ofrece numerosos beneficios para el desarrollo integral del niño, sentando las bases para un aprendizaje efectivo a lo largo de su vida.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -190,6 +204,10 @@ const beneficios = [
             </Card>
           ))
         }
+      </div>
+
+      <div class="mt-8">
+        <img src="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Niños desarrollando habilidades cognitivas" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
       </div>
     </div>
   </section>

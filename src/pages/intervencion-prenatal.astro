@@ -56,16 +56,10 @@ const beneficios = [
   </Hero>
 
   <!-- Introducción -->
-  <section class="py-12 bg-background">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
-      <div class="text-center mb-8">
-        <h2>¿Qué es la Intervención Prenatal Temprana?</h2>
-        <p class="mt-2 max-w-3xl mx-auto">
-          La Intervención Prenatal Temprana abarca actividades realizadas antes del nacimiento para promover el desarrollo integral del bebé. Esto incluye estimulación auditiva, táctil, motora y visual dirigida a mejorar el desarrollo cognitivo, emocional y sensorial del feto mientras se establece una comunicación afectiva entre el bebé por nacer y los padres.
-        </p>
-        <p class="mt-2 max-w-3xl mx-auto">Nuestro enfoque se basa en la evidencia científica que demuestra que el feto es capaz de percibir, responder y aprender de los estímulos externos desde etapas tempranas del embarazo, lo que sienta las bases para un desarrollo óptimo después del nacimiento.</p>
-      </div>
-
+  <section class="py-12 bg-background relative overflow-hidden">
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 -right-48 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl transform -translate-y-1/2"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Estimulación prenatal" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
@@ -86,10 +80,12 @@ const beneficios = [
   </section>
 
   <!-- Servicios para Embarazadas -->
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 relative overflow-hidden">
+    <div class="absolute top-1/4 right-0 w-80 h-80 bg-pink-300/30 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-1/4 left-0 w-80 h-80 bg-pink-400/30 rounded-full blur-2xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-8">
-        <h2>Servicios para Embarazadas</h2>
+        <h2 class="text-pink-700 font-bold">Servicios para Embarazadas</h2>
         <p class="mt-2 max-w-3xl mx-auto">Ofrecemos una variedad de servicios diseñados específicamente para apoyar el desarrollo prenatal, adaptados a las necesidades individuales de cada embarazada y su bebé.</p>
       </div>
 
@@ -103,8 +99,9 @@ const beneficios = [
         }
       </div>
 
-      <div class="mt-8">
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <img src="https://images.unsplash.com/photo-1584814169175-a154985e4517?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Sesión de estimulación prenatal" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        <img src="https://images.unsplash.com/photo-1631567451975-93a6e6a9ec3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Embarazada recibiendo atención" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
       </div>
     </div>
   </section>
@@ -113,7 +110,7 @@ const beneficios = [
   <section class="py-12 bg-background">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
       <div class="text-center mb-8">
-        <h2>Servicios para Familias</h2>
+        <h2 class="text-pink-700 font-bold">Servicios para Familias</h2>
         <p class="mt-2 max-w-3xl mx-auto">Reconocemos el papel fundamental de la familia en el desarrollo prenatal. Por eso, ofrecemos servicios diseñados para empoderar a las familias con conocimientos, habilidades y recursos.</p>
       </div>
 
@@ -126,18 +123,24 @@ const beneficios = [
           ))
         }
       </div>
+
+      <div class="mt-8">
+        <img src="https://images.unsplash.com/photo-1531983412531-1f49a365ffed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Familia esperando un bebé" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+      </div>
     </div>
   </section>
 
   <!-- Beneficios -->
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 relative overflow-hidden">
+    <div class="absolute top-1/4 right-0 w-80 h-80 bg-pink-300/30 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-1/4 left-0 w-80 h-80 bg-pink-400/30 rounded-full blur-2xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-8">
-        <h2>Beneficios de la Intervención Prenatal Temprana</h2>
+        <h2 class="text-pink-700 font-bold">Beneficios de la Intervención Prenatal Temprana</h2>
         <p class="mt-2 max-w-3xl mx-auto">La intervención prenatal temprana ofrece numerosos beneficios tanto para el bebé como para los padres, sentando las bases para un desarrollo óptimo y una relación afectiva sólida.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {
           beneficios.map((beneficio) => (
             <Card title={beneficio.title} icon={beneficio.icon}>
@@ -145,6 +148,11 @@ const beneficios = [
             </Card>
           ))
         }
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Embarazada feliz" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
+        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Bebé recién nacido" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video" />
       </div>
     </div>
   </section>

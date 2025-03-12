@@ -48,8 +48,10 @@ const servicios = [
   </Hero>
 
   <!-- Introducción a los Servicios -->
-  <section class="py-12 bg-background">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 bg-background relative overflow-hidden">
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-8">
         <h2>Servicios de Intervención Temprana</h2>
         <p class="mt-2 max-w-3xl mx-auto">
@@ -62,8 +64,10 @@ const servicios = [
   </section>
 
   <!-- Listado de Servicios -->
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+  <section class="py-12 relative overflow-hidden">
+    <div class="absolute top-1/4 right-0 w-80 h-80 bg-pink-300/30 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-1/4 left-0 w-80 h-80 bg-pink-400/30 rounded-full blur-2xl"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       {
         servicios.map((servicio, index) => (
           <div class={`flex flex-col md:flex-row gap-6 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""} mb-12`}>
