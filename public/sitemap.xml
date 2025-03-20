@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://neuroexpresion.com/</loc>
+    <loc>https://centroneuroexpresion.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/about</loc>
+    <loc>https://centroneuroexpresion.vercel.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/services</loc>
+    <loc>https://centroneuroexpresion.vercel.app/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/programs</loc>
+    <loc>https://centroneuroexpresion.vercel.app/programs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/resources</loc>
+    <loc>https://centroneuroexpresion.vercel.app/resources</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/contacto</loc>
+    <loc>https://centroneuroexpresion.vercel.app/contacto</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/intervencion-cognitiva</loc>
+    <loc>https://centroneuroexpresion.vercel.app/intervencion-cognitiva</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/intervencion-linguistica</loc>
+    <loc>https://centroneuroexpresion.vercel.app/intervencion-linguistica</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/intervencion-prenatal</loc>
+    <loc>https://centroneuroexpresion.vercel.app/intervencion-prenatal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/intervencion-sensoriomotora</loc>
+    <loc>https://centroneuroexpresion.vercel.app/intervencion-sensoriomotora</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/privacy-policy</loc>
+    <loc>https://centroneuroexpresion.vercel.app/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/terms-of-service</loc>
+    <loc>https://centroneuroexpresion.vercel.app/terms-of-service</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://neuroexpresion.com/accessibility</loc>
+    <loc>https://centroneuroexpresion.vercel.app/accessibility</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

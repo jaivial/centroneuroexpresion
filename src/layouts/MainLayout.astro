@@ -4,6 +4,8 @@ import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 const { title, description } = Astro.props;
+const currentUrl = Astro.url.href;
+const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(`${title} | Centro NeuroExpresión - ${currentUrl}`)}`;
 ---
 
 <!doctype html>
@@ -11,16 +13,34 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} | Centro de Intervención Temprana</title>
+    <title>{title} | Centro NeuroExpresión</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/logobueno.svg" />
     <meta name="generator" content={Astro.generator} />
+    <!-- Social sharing meta tags -->
+    <meta property="og:title" content={`${title} | Centro NeuroExpresión`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={currentUrl} />
+    <!-- Open Graph image for social sharing -->
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:type" content="website" />
+
+    <!-- WhatsApp specific meta tags -->
+    <meta property="og:site_name" content="Centro NeuroExpresión" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | Centro NeuroExpresión`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/logobueno.svg" />
   </head>
   <body>
     <Header />
     <main>
       <slot />
     </main>
+
     <Footer />
   </body>
 </html>

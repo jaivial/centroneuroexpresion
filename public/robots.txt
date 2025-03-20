@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://neuroexpresion.com/sitemap.xml 
+Sitemap: https://centroneuroexpresion.vercel.app/sitemap.xml 
