@@ -1,0 +1,74 @@
+---
+const { title, icon } = Astro.props;
+---
+
+<div class="dropdown-container mb-6">
+  <button class="dropdown-button w-full flex items-center justify-between bg-white p-4 rounded-lg shadow-sm border border-pink-200 hover:border-pink-300 transition-all duration-300">
+    <div class="flex items-center gap-3">
+      {
+        icon && (
+          <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon} />
+            </svg>
+          </div>
+        )
+      }
+      <span class="font-semibold text-gray-700">{title}</span>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div class="dropdown-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out bg-white rounded-b-lg">
+    <div class="p-4 border-x border-b border-pink-200 rounded-b-lg">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdowns = document.querySelectorAll<HTMLElement>(".dropdown-container");
+
+    dropdowns.forEach((dropdown) => {
+      const button = dropdown.querySelector<HTMLButtonElement>(".dropdown-button");
+      const content = dropdown.querySelector<HTMLElement>(".dropdown-content");
+      const arrow = button?.querySelector<SVGElement>("svg");
+
+      button?.addEventListener("click", () => {
+        const isExpanded = content?.classList.contains("active");
+
+        // Close all other dropdowns
+        dropdowns.forEach((otherDropdown) => {
+          if (otherDropdown !== dropdown) {
+            const otherContent = otherDropdown.querySelector<HTMLElement>(".dropdown-content");
+            const otherArrow = otherDropdown.querySelector<SVGElement>(".dropdown-button svg");
+            otherContent?.classList.remove("active");
+            if (otherContent) otherContent.style.maxHeight = "0px";
+            otherArrow?.classList.remove("rotate-180");
+          }
+        });
+
+        // Toggle current dropdown
+        if (isExpanded) {
+          content?.classList.remove("active");
+          if (content) content.style.maxHeight = "0px";
+          arrow?.classList.remove("rotate-180");
+        } else {
+          content?.classList.add("active");
+          const height = content?.scrollHeight;
+          if (content) content.style.maxHeight = height + "px";
+          arrow?.classList.add("rotate-180");
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+  }
+</style>

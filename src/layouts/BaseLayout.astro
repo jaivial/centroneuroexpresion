@@ -1,0 +1,47 @@
+---
+const { title, description, image, url } = Astro.props;
+
+const defaultTitle = "Centro NeuroExpresión - Intervención Temprana";
+const defaultDescription = "Servicios especializados de intervención temprana para niños desde el nacimiento hasta los doce años.";
+const defaultImage = "/logobueno.svg";
+const siteUrl = "https://neuroexpresion.com";
+
+const finalTitle = title || defaultTitle;
+const finalDescription = description || defaultDescription;
+const finalImage = image || defaultImage;
+const finalUrl = url ? `${siteUrl}${url}` : siteUrl;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{finalTitle}</title>
+    <meta name="description" content={finalDescription} />
+
+    <!-- WhatsApp Meta Tags -->
+    <meta property="og:site_name" content="Centro NeuroExpresión" />
+    <meta property="og:title" content={finalTitle} />
+    <meta property="og:description" content={finalDescription} />
+    <meta property="og:image" content={finalImage} />
+    <meta property="og:url" content={finalUrl} />
+    <meta property="og:type" content="website" />
+
+    <!-- Additional Meta Tags for better sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={finalTitle} />
+    <meta name="twitter:description" content={finalDescription} />
+    <meta name="twitter:image" content={finalImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={finalUrl} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
