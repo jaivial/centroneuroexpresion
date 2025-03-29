@@ -4,45 +4,22 @@ import Hero from "../components/Hero.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import CallToAction from "../components/CallToAction.astro";
-import Dropdown from "../components/Dropdown.astro";
 
 const serviciosNinos = [
   {
     title: "Sesiones de estimulación cognitiva",
     description: "Sesiones individuales o en pequeños grupos diseñadas para estimular el desarrollo cognitivo a través de actividades lúdicas y estructuradas.",
     icon: "brain",
-    subsections: [
-      {
-        title: "Sesión 1: Rompecabezas temáticos",
-        content: "Actividad de ensamblaje de rompecabezas de 15 piezas con imágenes temáticas y texturas. Los niños observan la imagen, clasifican las piezas y las ensamblan con apoyo. Enfocado en mejorar la planificación y memoria visual.",
-      },
-      {
-        title: "Sesión 2: Clasificando el mundo",
-        content: "Ejercicio de clasificación de objetos cotidianos según color, tamaño, uso o material. Se utilizan objetos reales o tarjetas ilustradas. Desarrolla el pensamiento categorial y la flexibilidad mental.",
-      },
-    ],
   },
   {
     title: "Intervención para niños con discapacidad intelectual",
     description: "Programas personalizados para niños con discapacidad intelectual, centrados en potenciar sus capacidades y mejorar su autonomía.",
     icon: "puzzle",
-    subsections: [
-      {
-        title: "Explorando nuestro conocimiento",
-        content: "Sesión para niños de 7-12 años con tres actividades principales:\n\n1. Tablero de imágenes: Ejercicios progresivos de identificación y memoria visual.\n\n2. Patrones de helado: Replicación de secuencias de colores usando plantillas.\n\n3. Problemas matemáticos: Resolución de operaciones básicas usando materiales manipulativos.",
-      },
-    ],
   },
   {
     title: "Actividades para niños con altas capacidades",
     description: "Programas de enriquecimiento para niños con altas capacidades, diseñados para estimular su potencial y prevenir el aburrimiento o la desmotivación.",
     icon: "lightbulb",
-    subsections: [
-      {
-        title: "Mentes en Acción",
-        content: "Programa para niños de 7-10 años con tres componentes:\n\n1. Acertijos y retos: Problemas lógico-matemáticos con debates grupales.\n\n2. Secuencias y patrones: Desafíos para descifrar patrones en palabras, símbolos y números.\n\n3. Solución creativa: Trabajo en equipo para resolver problemas reales con materiales diversos.",
-      },
-    ],
   },
 ];
 
@@ -139,20 +116,12 @@ const beneficios = [
         <p class="mt-2 max-w-3xl mx-auto">Ofrecemos una variedad de servicios diseñados específicamente para apoyar el desarrollo cognitivo de los niños, adaptados a sus necesidades individuales y etapa de desarrollo.</p>
       </div>
 
-      <div class="grid grid-cols-1 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {
           serviciosNinos.map((servicio) => (
             <div class="bg-white rounded-lg p-6 shadow-sm">
               <Card title={servicio.title} icon={servicio.icon}>
-                <p class="mb-6">{servicio.description}</p>
-                {servicio.subsections &&
-                  servicio.subsections.map((subsection) => (
-                    <Dropdown title={subsection.title} icon={servicio.icon}>
-                      <div class="prose prose-pink max-w-none">
-                        <p class="text-gray-600 whitespace-pre-line">{subsection.content}</p>
-                      </div>
-                    </Dropdown>
-                  ))}
+                <p>{servicio.description}</p>
               </Card>
             </div>
           ))
