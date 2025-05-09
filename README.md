@@ -1,27 +1,98 @@
-# Centro de Intervención Temprana Website
+# Centro de Neuro Expresión | Early Intervention Center
 
-A modern, accessible website for an early intervention center built with Astro and Tailwind CSS.
+![Centro Logo](/public/logobueno.svg)
 
-## Project Overview
+## English | [Español](#español)
 
-This website serves as an online presence for a center focused on early intervention services for children from birth to six years. It provides information about the center's services, team, approach, and contact details.
+A modern, accessible website for an early intervention center focused on children from birth to six years old, built with Astro and Tailwind CSS.
 
-## Features
+## 🌟 Project Overview
 
-- Responsive design optimized for all devices
-- Modern, child-friendly UI with a warm and professional aesthetic
-- Accessible navigation and content
-- Fast performance with minimal JavaScript
-- SEO-friendly structure
+This website serves as the online presence for "Centro de Neuro Expresión", a center specializing in early intervention services. The site provides comprehensive information about the center's specialized services across four key developmental areas:
 
-## Tech Stack
+- Cognitive Intervention
+- Linguistic Intervention
+- Prenatal Intervention
+- Sensorimotor Intervention
+
+The website also includes information about the team, approach, and contact details.
+
+## 🔍 Features
+
+- **Responsive Design**: Optimized for all devices from mobile to desktop
+- **Child-friendly UI**: Warm and professional aesthetic suitable for families
+- **Accessibility**: Compliant with web accessibility standards
+- **Performance**: Fast loading with minimal JavaScript using Astro's partial hydration
+- **Multilingual**: Available in Spanish and English
+- **SEO-friendly**: Optimized structure with proper meta tags and sitemap
+
+## 🛠️ Tech Stack
 
 - **Framework**: [Astro](https://astro.build/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Typography**: Quicksand, Nunito, and Varela Round via Fontsource
+- **Icons**: [Astro Icon](https://github.com/natemoo-re/astro-icon)
 - **Deployment**: [Netlify](https://netlify.com/)
 
-## Getting Started
+## 📁 Project Structure
+
+```
+/
+├── public/                # Static assets
+│   ├── images/            # Image assets
+│   ├── testimonials/      # Testimonial images
+│   ├── favicon.svg        # Site favicon
+│   ├── logo.svg           # Site logo
+│   ├── logo-white.svg     # White version of logo
+│   ├── robots.txt         # SEO robots file
+│   └── sitemap.xml        # Site map for SEO
+│
+├── src/
+│   ├── assets/            # Processed assets
+│   │
+│   ├── components/        # Reusable UI components
+│   │   ├── Button.astro   # Button component
+│   │   ├── Card.astro     # Card component
+│   │   ├── CallToAction.astro # CTA component
+│   │   ├── Dropdown.astro # Navigation dropdown
+│   │   ├── Footer.astro   # Site footer
+│   │   ├── Header.astro   # Site header
+│   │   ├── Hero.astro     # Hero section
+│   │   ├── Testimonial.astro # Testimonial component
+│   │   └── Welcome.astro  # Welcome section
+│   │
+│   ├── layouts/           # Page layouts
+│   │   ├── BaseLayout.astro # Base layout
+│   │   ├── Layout.astro   # Simple layout
+│   │   └── MainLayout.astro # Main site layout
+│   │
+│   ├── pages/             # Astro pages (routes)
+│   │   ├── index.astro    # Home page
+│   │   ├── about.astro    # About page (English)
+│   │   ├── nosotros.astro # About page (Spanish)
+│   │   ├── services.astro # Services page (English)
+│   │   ├── servicios.astro # Services page (Spanish)
+│   │   ├── contact.astro  # Contact page (English)
+│   │   ├── contacto.astro # Contact page (Spanish)
+│   │   ├── intervencion-cognitiva.astro # Cognitive intervention
+│   │   ├── intervencion-linguistica.astro # Linguistic intervention
+│   │   ├── intervencion-prenatal.astro # Prenatal intervention
+│   │   ├── intervencion-sensoriomotora.astro # Sensorimotor intervention
+│   │   └── 404.astro      # 404 error page
+│   │
+│   └── styles/            # Global styles and Tailwind config
+│
+├── .astro/                # Astro build files
+├── .cursor/               # Cursor IDE config
+├── .vscode/               # VS Code config
+├── astro.config.mjs       # Astro configuration
+├── tailwind.config.cjs    # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+├── package.json           # Dependencies and scripts
+└── netlify.toml           # Netlify deployment config
+```
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -32,8 +103,8 @@ This website serves as an online presence for a center focused on early interven
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/centro-intervencion.git
-   cd centro-intervencion
+   git clone https://github.com/jaivial/centroneuroexpresion.git
+   cd centroneuroexpresion
    ```
 
 2. Install dependencies:
@@ -48,22 +119,7 @@ This website serves as an online presence for a center focused on early interven
 
 4. Open your browser and navigate to `http://localhost:4321`
 
-## Project Structure
-
-```
-/
-├── public/           # Static assets (images, fonts, etc.)
-├── src/
-│   ├── components/   # Reusable UI components
-│   ├── layouts/      # Page layouts
-│   ├── pages/        # Astro pages (routes)
-│   └── styles/       # Global styles and Tailwind config
-├── astro.config.mjs  # Astro configuration
-├── tailwind.config.cjs # Tailwind configuration
-└── package.json      # Dependencies and scripts
-```
-
-## Building for Production
+## 🏗️ Building for Production
 
 To create a production build:
 
@@ -73,63 +129,156 @@ npm run build
 
 The built files will be in the `dist/` directory.
 
-## Deployment
+## 🚢 Deployment
 
-This site is configured for deployment on Netlify. Simply connect your Netlify account to your repository, and it will automatically build and deploy when changes are pushed to the main branch.
+This site is configured for deployment on Netlify. The site automatically builds and deploys when changes are pushed to the main branch.
 
-## License
+Live site: [centroneuroexpresion.com](https://www.centroneuroexpresion.com)
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📜 License
 
-## Acknowledgements
+This project is licensed under the MIT License.
 
-- Design inspiration from [source]
-- Icons from [Heroicons](https://heroicons.com/)
-- Fonts from [Google Fonts](https://fonts.google.com/) via [Fontsource](https://fontsource.org/)
+---
 
-```sh
-npm create astro@latest -- --template basics
+<a name="español"></a>
+# Centro de Neuro Expresión | Centro de Intervención Temprana
+
+![Logo del Centro](/public/logobueno.svg)
+
+## [English](#english) | Español
+
+Un sitio web moderno y accesible para un centro de intervención temprana enfocado en niños desde el nacimiento hasta los seis años, construido con Astro y Tailwind CSS.
+
+## 🌟 Descripción del Proyecto
+
+Este sitio web sirve como presencia online para el "Centro de Neuro Expresión", un centro especializado en servicios de intervención temprana. El sitio proporciona información completa sobre los servicios especializados del centro en cuatro áreas clave del desarrollo:
+
+- Intervención Cognitiva
+- Intervención Lingüística
+- Intervención Prenatal
+- Intervención Sensoriomotora
+
+El sitio web también incluye información sobre el equipo, enfoque y datos de contacto.
+
+## 🔍 Características
+
+- **Diseño Responsivo**: Optimizado para todos los dispositivos, desde móviles hasta escritorio
+- **Interfaz Amigable**: Estética cálida y profesional adecuada para familias
+- **Accesibilidad**: Cumple con los estándares de accesibilidad web
+- **Rendimiento**: Carga rápida con JavaScript mínimo usando la hidratación parcial de Astro
+- **Multilingüe**: Disponible en español e inglés
+- **Optimizado para SEO**: Estructura optimizada con metaetiquetas adecuadas y mapa del sitio
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Framework**: [Astro](https://astro.build/)
+- **Estilos**: [Tailwind CSS](https://tailwindcss.com/)
+- **Tipografía**: Quicksand, Nunito y Varela Round a través de Fontsource
+- **Iconos**: [Astro Icon](https://github.com/natemoo-re/astro-icon)
+- **Despliegue**: [Netlify](https://netlify.com/)
+
+## 📁 Estructura del Proyecto
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
-│   └── favicon.svg
+├── public/                # Activos estáticos
+│   ├── images/            # Imágenes
+│   ├── testimonials/      # Imágenes de testimonios
+│   ├── favicon.svg        # Favicon del sitio
+│   ├── logo.svg           # Logo del sitio
+│   ├── logo-white.svg     # Versión blanca del logo
+│   ├── robots.txt         # Archivo robots para SEO
+│   └── sitemap.xml        # Mapa del sitio para SEO
+│
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/            # Activos procesados
+│   │
+│   ├── components/        # Componentes UI reutilizables
+│   │   ├── Button.astro   # Componente de botón
+│   │   ├── Card.astro     # Componente de tarjeta
+│   │   ├── CallToAction.astro # Componente CTA
+│   │   ├── Dropdown.astro # Menú desplegable
+│   │   ├── Footer.astro   # Pie de página
+│   │   ├── Header.astro   # Encabezado del sitio
+│   │   ├── Hero.astro     # Sección hero
+│   │   ├── Testimonial.astro # Componente de testimonio
+│   │   └── Welcome.astro  # Sección de bienvenida
+│   │
+│   ├── layouts/           # Layouts de página
+│   │   ├── BaseLayout.astro # Layout base
+│   │   ├── Layout.astro   # Layout simple
+│   │   └── MainLayout.astro # Layout principal del sitio
+│   │
+│   ├── pages/             # Páginas Astro (rutas)
+│   │   ├── index.astro    # Página principal
+│   │   ├── about.astro    # Página Sobre Nosotros (inglés)
+│   │   ├── nosotros.astro # Página Sobre Nosotros (español)
+│   │   ├── services.astro # Página de Servicios (inglés)
+│   │   ├── servicios.astro # Página de Servicios (español)
+│   │   ├── contact.astro  # Página de Contacto (inglés)
+│   │   ├── contacto.astro # Página de Contacto (español)
+│   │   ├── intervencion-cognitiva.astro # Intervención cognitiva
+│   │   ├── intervencion-linguistica.astro # Intervención lingüística
+│   │   ├── intervencion-prenatal.astro # Intervención prenatal
+│   │   ├── intervencion-sensoriomotora.astro # Intervención sensoriomotora
+│   │   └── 404.astro      # Página de error 404
+│   │
+│   └── styles/            # Estilos globales y configuración de Tailwind
+│
+├── .astro/                # Archivos de compilación de Astro
+├── .cursor/               # Configuración de Cursor IDE
+├── .vscode/               # Configuración de VS Code
+├── astro.config.mjs       # Configuración de Astro
+├── tailwind.config.cjs    # Configuración de Tailwind CSS
+├── tsconfig.json          # Configuración de TypeScript
+├── package.json           # Dependencias y scripts
+└── netlify.toml           # Configuración de despliegue en Netlify
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🚀 Primeros Pasos
 
-## 🧞 Commands
+### Prerrequisitos
 
-All commands are run from the root of the project, from a terminal:
+- Node.js (v18 o superior)
+- npm o yarn
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Instalación
 
-## 👀 Want to learn more?
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/jaivial/centroneuroexpresion.git
+   cd centroneuroexpresion
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Iniciar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+4. Abrir el navegador y navegar a `http://localhost:4321`
+
+## 🏗️ Compilación para Producción
+
+Para crear una compilación de producción:
+
+```bash
+npm run build
+```
+
+Los archivos compilados estarán en el directorio `dist/`.
+
+## 🚢 Despliegue
+
+Este sitio está configurado para su despliegue en Netlify. El sitio se compila y despliega automáticamente cuando se envían cambios a la rama principal.
+
+Sitio web: [centroneuroexpresion.com](https://www.centroneuroexpresion.com)
+
+## 📜 Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT.
